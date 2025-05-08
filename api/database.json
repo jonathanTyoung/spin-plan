@@ -1,0 +1,520 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "John Baker",
+      "email": "dj1@musicflow.com",
+      "isDj": true
+    },
+    {
+      "id": 102,
+      "name": "Jane Bittell",
+      "email": "dj2@rhythmsound.com",
+      "isDj": true
+    },
+    {
+      "id": 103,
+      "name": "Alice Johnson",
+      "email": "dj3@partybeats.com",
+      "isDj": true
+    },
+    {
+      "id": 104,
+      "name": "Robert Williams",
+      "email": "dj4@vibeset.com",
+      "isDj": true
+    },
+    {
+      "id": 105,
+      "name": "Maria Garcia",
+      "email": "dj5@thebeat.com",
+      "isDj": true
+    },
+    {
+      "id": 106,
+      "name": "David Lee",
+      "email": "dj6@tunesonic.com",
+      "isDj": true
+    },
+    {
+      "id": 107,
+      "name": "Olivia Martinez",
+      "email": "dj7@soundwave.com",
+      "isDj": true
+    },
+    {
+      "id": 108,
+      "name": "Ethan Clark",
+      "email": "dj8@mixmaster.com",
+      "isDj": true
+    },
+    {
+      "id": 109,
+      "name": "Sophia Harris",
+      "email": "dj9@spinsounds.com",
+      "isDj": true
+    },
+    {
+      "id": 110,
+      "name": "Michael Brown",
+      "email": "dj10@bassdrop.com",
+      "isDj": true
+    },
+    {
+      "id": 201,
+      "name": "Jack Taylor",
+      "email": "jackt@email.com",
+      "isDj": false
+    },
+    {
+      "id": 202,
+      "name": "Emily White",
+      "email": "emilyw@email.com",
+      "isDj": false
+    },
+    {
+      "id": 203,
+      "name": "Oliver Young",
+      "email": "olivery@email.com",
+      "isDj": false
+    },
+    {
+      "id": 204,
+      "name": "Isabella Allen",
+      "email": "isabellaa@email.com",
+      "isDj": false
+    },
+    {
+      "id": 206,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 207,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 208,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 209,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 210,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 211,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 212,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 213,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 213,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 214,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+    {
+      "id": 215,
+      "name": "Daniel Hernandez",
+      "email": "danielh@email.com",
+      "isDj": false
+    }
+  ],
+
+  "DJs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "cost": 1000
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "cost": 1200
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "cost": 1500
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "cost": 950
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "cost": 1300
+    },
+    {
+      "id": 6,
+      "userId": 6,
+      "cost": 1100
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "cost": 1400
+    },
+    {
+      "id": 8,
+      "userId": 8,
+      "cost": 1000
+    },
+    {
+      "id": 9,
+      "userId": 9,
+      "cost": 1250
+    },
+    {
+      "id": 10,
+      "userId": 10,
+      "cost": 950
+    }
+  ],
+
+  "clients": [
+    {
+      "id": 1,
+      "userId": 201
+    },
+    {
+      "id": 2,
+      "userId": 202
+    },
+    {
+      "id": 3,
+      "userId": 203
+    },
+    {
+      "id": 4,
+      "userId": 204
+    },
+    {
+      "id": 5,
+      "userId": 205
+    },
+    {
+      "id": 6,
+      "userId": 206
+    },
+    {
+      "id": 7,
+      "userId": 207
+    },
+    {
+      "id": 8,
+      "userId": 208
+    },
+    {
+      "id": 9,
+      "userId": 209
+    },
+    {
+      "id": 10,
+      "userId": 210
+    },
+    {
+      "id": 11,
+      "userId": 211
+    },
+    {
+      "id": 12,
+      "userId": 212
+    },
+    {
+      "id": 13,
+      "userId": 213
+    },
+    {
+      "id": 14,
+      "userId": 214
+    },
+    {
+      "id": 15,
+      "userId": 215
+    }
+  ],
+  "venues": [
+    {
+      "id": 1,
+      "name": "Skyline Banquet Hall",
+      "location": "New York, NY",
+      "cost": 5000
+    },
+    {
+      "id": 2,
+      "name": "Oceanview Resort",
+      "location": "Miami, FL",
+      "cost": 8000
+    },
+    {
+      "id": 3,
+      "name": "City Central Hotel",
+      "location": "Chicago, IL",
+      "cost": 4500
+    },
+    {
+      "id": 4,
+      "name": "Grand Mansion",
+      "location": "Los Angeles, CA",
+      "cost": 7000
+    },
+    {
+      "id": 5,
+      "name": "Sunset Garden",
+      "location": "Austin, TX",
+      "cost": 4000
+    },
+    {
+      "id": 6,
+      "name": "Royal Palace",
+      "location": "Las Vegas, NV",
+      "cost": 12000
+    },
+    {
+      "id": 7,
+      "name": "Lakeside Pavilion",
+      "location": "San Francisco, CA",
+      "cost": 5500
+    },
+    {
+      "id": 8,
+      "name": "Rustic Barn",
+      "location": "Nashville, TN",
+      "cost": 3000
+    },
+    {
+      "id": 9,
+      "name": "Elegant Ballroom",
+      "location": "Orlando, FL",
+      "cost": 6000
+    },
+    {
+      "id": 10,
+      "name": "Vintage Winery",
+      "location": "Sonoma, CA",
+      "cost": 3500
+    },
+    {
+      "id": 11,
+      "name": "Downtown Loft",
+      "location": "New York, NY",
+      "cost": 4000
+    },
+    {
+      "id": 12,
+      "name": "Beachfront Estate",
+      "location": "Santa Monica, CA",
+      "cost": 9500
+    },
+    {
+      "id": 13,
+      "name": "Mountain Retreat",
+      "location": "Denver, CO",
+      "cost": 6500
+    },
+    {
+      "id": 14,
+      "name": "Historic Castle",
+      "location": "San Diego, CA",
+      "cost": 8500
+    },
+    {
+      "id": 15,
+      "name": "Luxury Yacht",
+      "location": "Miami, FL",
+      "cost": 10000
+    }
+  ],
+  "addOns": [
+    {
+      "id": 1,
+      "name": "Photobooth",
+      "cost": 300
+    },
+    {
+      "id": 2,
+      "name": "Uplighting",
+      "cost": 150
+    },
+    {
+      "id": 3,
+      "name": "Photobooth Roamer",
+      "cost": 400
+    },
+    {
+      "id": 4,
+      "name": "Additional Time (1 Hour)",
+      "cost": 200
+    },
+    {
+      "id": 5,
+      "name": "DJ + Live Musician Combo",
+      "cost": 500
+    },
+    {
+      "id": 6,
+      "name": "Laser Light Show",
+      "cost": 350
+    },
+    {
+      "id": 7,
+      "name": "Fog Machine",
+      "cost": 180
+    },
+    {
+      "id": 8,
+      "name": "Custom Gobo Projector",
+      "cost": 250
+    },
+    {
+      "id": 9,
+      "name": "Confetti Cannon",
+      "cost": 300
+    },
+    {
+      "id": 10,
+      "name": "Live Band Performance",
+      "cost": 800
+    },
+    {
+      "id": 11,
+      "name": "Catering Service",
+      "cost": 2000
+    },
+    {
+      "id": 12,
+      "name": "Event Photographer",
+      "cost": 1500
+    },
+    {
+      "id": 13,
+      "name": "Event Videographer",
+      "cost": 1800
+    },
+    {
+      "id": 14,
+      "name": "Car Service for Guests",
+      "cost": 1200
+    },
+    {
+      "id": 15,
+      "name": "Event Security Staff",
+      "cost": 500
+    },
+    {
+      "id": 16,
+      "name": "Fireworks Display",
+      "cost": 2500
+    },
+    {
+      "id": 17,
+      "name": "Dancefloor LED Lights",
+      "cost": 450
+    },
+    {
+      "id": 18,
+      "name": "Chill-out Lounge Area",
+      "cost": 1000
+    },
+    {
+      "id": 19,
+      "name": "Saxophone Performance",
+      "cost": 400
+    },
+    {
+      "id": 20,
+      "name": "Violin Performance",
+      "cost": 350
+    }
+  ],
+  "eventAddOns": [
+    {
+      "ID": 1,
+      "addOnsId": 1
+    },
+    {
+      "ID": 2,
+      "addOnsId": 3
+    },
+    {
+      "ID": 3,
+      "addOnsId": 4
+    },
+    {
+      "ID": 4,
+      "addOnsId": 7
+    },
+    {
+      "ID": 5,
+      "addOnsId": 9
+    },
+    {
+      "ID": 6,
+      "addOnsId": 11
+    },
+    {
+      "ID": 7,
+      "addOnsId": 12
+    },
+    {
+      "ID": 8,
+      "addOnsId": 13
+    },
+    {
+      "ID": 9,
+      "addOnsId": 14
+    },
+    {
+      "ID": 10,
+      "addOnsId": 15
+    }
+  ],
+  "finalDetailsEvents": [
+    [
+      { "id": "1", "djId": "5", "clientId": "3", "eventAddOnsId": "1", "venueId": "3", "date": "2025-08-21", "eventType": "wedding" },
+      { "id": "2", "djId": "12", "clientId": "1", "eventAddOnsId": "2", "venueId": "1", "date": "2025-06-08", "eventType": "club event" },
+      { "id": "3", "djId": "6", "clientId": "2", "eventAddOnsId": "3", "venueId": "2", "date": "2025-07-15", "eventType": "corporate" },
+      { "id": "4", "djId": "3", "clientId": "4", "eventAddOnsId": "4", "venueId": "4", "date": "2025-09-10", "eventType": "wedding" },
+      { "id": "5", "djId": "8", "clientId": "5", "eventAddOnsId": "5", "venueId": "5", "date": "2025-10-02", "eventType": "graduation" },
+      { "id": "6", "djId": "7", "clientId": "6", "eventAddOnsId": "6", "venueId": "6", "date": "2025-10-15", "eventType": "anniversary" },
+      { "id": "7", "djId": "10", "clientId": "7", "eventAddOnsId": "7", "venueId": "7", "date": "2025-11-03", "eventType": "club event" },
+      { "id": "8", "djId": "2", "clientId": "8", "eventAddOnsId": "8", "venueId": "8", "date": "2025-12-25", "eventType": "birthday" },
+      { "id": "9", "djId": "1", "clientId": "9", "eventAddOnsId": "9", "venueId": "9", "date": "2026-01-10", "eventType": "wedding" },
+      { "id": "10", "djId": "4", "clientId": "10", "eventAddOnsId": "10", "venueId": "10", "date": "2026-02-14", "eventType": "wedding" }
+    ]
+  ]
+}

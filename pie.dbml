@@ -1,0 +1,45 @@
+Table Events {
+  id int pk
+  venueId varchar
+  eventDate varchar
+  eventType varchar
+  clientId int
+  djId int
+  eventAddOnsId int
+}
+
+Table eventAddOns {
+  id int pk
+  addOnsId int
+}
+Table addOns {
+  id int pk
+  name varchar
+  cost int
+}
+Table venue {
+  id int pk
+  size int
+  name varchar
+  baseCost decimal
+}
+Table users {
+  id int pk
+  name varchar
+  email varchar
+  isDj boolean
+}
+Table djs {
+  id int pk
+  userId int
+  name varchar
+  email varchar
+  isDj boolean
+}
+Table clients {
+  id int pk
+  userId int
+  name varchar
+  email varchar
+  isDj boolean
+}
