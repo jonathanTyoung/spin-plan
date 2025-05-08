@@ -1,5 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { NavBar } from "../components/nav/NavBar.jsx"
+// import { NavBar } from "../components/nav/NavBar"
 import { Welcome } from "../welcome/welcome.jsx"
 
 

@@ -5,8 +5,8 @@
   --primary-color: #ff0055;
   --secondary-color: #111111;
   --accent-color: #f0c000;
-  --bg-color: #fdfdfd;
-  --font-family: 'Poppins', sans-serif;
+  --bg-color: gray;
+  --font-family: 'Nunito', sans-serif;
 }
 
 /* Global body styles */
@@ -46,4 +46,10 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 1.5em;
   margin: 1em 0;
+}
+
+
+/* styling for login component */ 
+.container-login {
+  text-align: center;
 }

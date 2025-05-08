@@ -13,12 +13,12 @@ export const Login = () => {
 
         getUserByEmail(email).then((foundUsers) => {
             if (foundUsers.length === 1) {
-                const employee = foundUsers[0]
+                const user = foundUsers[0]
                 localStorage.setItem(
                     "spin_plan_user",
                     JSON.stringify({
-                        id: employee.id,
-                        isAdmin: employee.isAdmin,
+                        id: user.id,
+                        isDJ: user.isDJ,
                     })
                 )
 
