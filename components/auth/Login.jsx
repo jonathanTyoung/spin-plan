@@ -10,61 +10,67 @@ import "./Login.css"
 import { getUserByEmail } from "../services/userServices.js"
 
 export const Login = () => {
-  const [email, set] = useState("isabella.white@gmail.com")
-  const navigate = useNavigate()
+    const [email, set] = useState("isabella.white@gmail.com")
+    const navigate = useNavigate()
 
-  const handleLogin = (e) => {
-    e.preventDefault()
+    const handleLogin = (e) => {
+        e.preventDefault()
 
-    getUserByEmail(email).then((foundUsers) => {
-      if (foundUsers.length === 1) {
-        const employee = foundUsers[0]
-        localStorage.setItem(
-          "spin_plan_user",
-          JSON.stringify({
-            id: employee.id,
-            isAdmin: employee.isAdmin,
-          })
-        )
+        getUserByEmail(email).then((foundUsers) => {
+            if (foundUsers.length === 1) {
+                const employee = foundUsers[0]
+                localStorage.setItem(
+                    "spin_plan_user",
+                    JSON.stringify({
+                        id: employee.id,
+                        isAdmin: employee.isAdmin,
+                    })
+                )
 
-        navigate("/")
-      } else {
-        window.alert("Invalid login")
-      }
-    })
-  }
+                navigate("/")
+            } else {
+                window.alert("Invalid login")
+            }
+        })
+    }
 
-  return (
-    <main className="container-login">
-      <section>
-        <form className="form-login" onSubmit={handleLogin}>
-          <h1>Shepherd's Pie</h1>
-          <h2>Please sign in</h2>
-          <fieldset>
-            <div className="form-group">
-              <input
-                type="email"
-                value={email}
-                onChange={(evt) => set(evt.target.value)}
-                className="form-control"
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
-          <fieldset>
-            <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
-                Sign in
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-      <section>
-        {/* <Link to="/register">Not a member yet?</Link> */}
-      </section>
-    </main>
-  )
-}
+    return (
+        <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+            <section className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+                <form className="space-y-6" onSubmit={handleLogin}>
+                    <h1 className="text-3xl font-bold text-center text-gray-800">Shepherd's Pie</h1>
+                    <h2 className="text-lg text-center text-gray-600">Please sign in</h2>
+                    <fieldset>
+                        <div className="form-group">
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(evt) => set(evt.target.value)}
+                                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                placeholder="Email address"
+                                required
+                                autoFocus
+                            />
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div className="form-group">
+                            <button
+                                className="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="submit"
+                            >
+                                Sign in
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section className="mt-4">
+                {/* Uncomment if needed */}
+                {/* <Link to="/register" className="text-blue-500 hover:underline">
+                    Not a member yet?
+                </Link> */}
+            </section>
+        </main>
+    );
+};
