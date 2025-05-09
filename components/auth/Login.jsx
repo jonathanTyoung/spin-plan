@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import { useState, React } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
-import { getUserByEmail } from "../services/userServices.js"
+import { getUserByEmail } from "../services/userServices.jsx"
 
 export const Login = () => {
     const [email, set] = useState("flynn@email.com")
@@ -18,7 +18,7 @@ export const Login = () => {
                     "spin_plan_user",
                     JSON.stringify({
                         id: user.id,
-                        isDJ: user.isDJ,
+                        isDJ: user.isDj,
                     })
                 )
 

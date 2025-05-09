@@ -151,7 +151,6 @@
       "isDj": false
     }
   ],
-
   "DJs": [
     {
       "id": 1,
@@ -204,7 +203,6 @@
       "cost": 950
     }
   ],
-
   "clients": [
     {
       "id": 1,
@@ -505,16 +503,96 @@
   ],
   "finalDetailsEvents": [
     [
-      { "id": "1", "djId": "5", "clientId": "3", "eventAddOnsId": "1", "venueId": "3", "date": "2025-08-21", "eventType": "wedding" },
-      { "id": "2", "djId": "12", "clientId": "1", "eventAddOnsId": "2", "venueId": "1", "date": "2025-06-08", "eventType": "club event" },
-      { "id": "3", "djId": "6", "clientId": "2", "eventAddOnsId": "3", "venueId": "2", "date": "2025-07-15", "eventType": "corporate" },
-      { "id": "4", "djId": "3", "clientId": "4", "eventAddOnsId": "4", "venueId": "4", "date": "2025-09-10", "eventType": "wedding" },
-      { "id": "5", "djId": "8", "clientId": "5", "eventAddOnsId": "5", "venueId": "5", "date": "2025-10-02", "eventType": "graduation" },
-      { "id": "6", "djId": "7", "clientId": "6", "eventAddOnsId": "6", "venueId": "6", "date": "2025-10-15", "eventType": "anniversary" },
-      { "id": "7", "djId": "10", "clientId": "7", "eventAddOnsId": "7", "venueId": "7", "date": "2025-11-03", "eventType": "club event" },
-      { "id": "8", "djId": "2", "clientId": "8", "eventAddOnsId": "8", "venueId": "8", "date": "2025-12-25", "eventType": "birthday" },
-      { "id": "9", "djId": "1", "clientId": "9", "eventAddOnsId": "9", "venueId": "9", "date": "2026-01-10", "eventType": "wedding" },
-      { "id": "10", "djId": "4", "clientId": "10", "eventAddOnsId": "10", "venueId": "10", "date": "2026-02-14", "eventType": "wedding" }
+      {
+        "id": "1",
+        "djId": "5",
+        "clientId": "3",
+        "eventAddOnsId": "1",
+        "venueId": "3",
+        "date": "2025-08-21",
+        "eventType": "wedding"
+      },
+      {
+        "id": "2",
+        "djId": "12",
+        "clientId": "1",
+        "eventAddOnsId": "2",
+        "venueId": "1",
+        "date": "2025-06-08",
+        "eventType": "club event"
+      },
+      {
+        "id": "3",
+        "djId": "6",
+        "clientId": "2",
+        "eventAddOnsId": "3",
+        "venueId": "2",
+        "date": "2025-07-15",
+        "eventType": "corporate"
+      },
+      {
+        "id": "4",
+        "djId": "3",
+        "clientId": "4",
+        "eventAddOnsId": "4",
+        "venueId": "4",
+        "date": "2025-09-10",
+        "eventType": "wedding"
+      },
+      {
+        "id": "5",
+        "djId": "8",
+        "clientId": "5",
+        "eventAddOnsId": "5",
+        "venueId": "5",
+        "date": "2025-10-02",
+        "eventType": "graduation"
+      },
+      {
+        "id": "6",
+        "djId": "7",
+        "clientId": "6",
+        "eventAddOnsId": "6",
+        "venueId": "6",
+        "date": "2025-10-15",
+        "eventType": "anniversary"
+      },
+      {
+        "id": "7",
+        "djId": "10",
+        "clientId": "7",
+        "eventAddOnsId": "7",
+        "venueId": "7",
+        "date": "2025-11-03",
+        "eventType": "club event"
+      },
+      {
+        "id": "8",
+        "djId": "2",
+        "clientId": "8",
+        "eventAddOnsId": "8",
+        "venueId": "8",
+        "date": "2025-12-25",
+        "eventType": "birthday"
+      },
+      {
+        "id": "9",
+        "djId": "1",
+        "clientId": "9",
+        "eventAddOnsId": "9",
+        "venueId": "9",
+        "date": "2026-01-10",
+        "eventType": "wedding"
+      },
+      {
+        "id": "10",
+        "djId": "4",
+        "clientId": "10",
+        "eventAddOnsId": "10",
+        "venueId": "10",
+        "date": "2026-02-14",
+        "eventType": "wedding"
+      }
     ]
   ]
 }

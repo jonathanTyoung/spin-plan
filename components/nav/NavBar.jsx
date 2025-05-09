@@ -15,18 +15,18 @@ export const NavBar = () => {
             <Link to="/Upcoming Events">Upcoming Events</Link>
         </li>
         <li className="navbar-item">
-            <Link to="/customers">Customers</Link>
+            <Link to="/djs">DJs</Link>
         </li>
-        <li className="navbar-item">
+        {/* <li className="navbar-item">
             <Link to="/profile">Profile</Link>
-        </li>
-        {localStorage.getItem("honey_user") ? (
+        </li> */}
+        {localStorage.getItem("spin_plan_user") ? (
             <li className="navbar-item navbar-logout">
                 <Link
                     className="navbar-link"
-                    to=""
+                    to="/login"
                     onClick={() => {
-                        localStorage.removeItem("honey_user")
+                        localStorage.removeItem("spin_plan_user")
                         navigate("/", { replace: true })
                     }}
                 >
