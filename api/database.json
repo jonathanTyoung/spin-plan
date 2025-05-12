@@ -153,57 +153,57 @@
   ],
   "DJs": [
     {
-      "id": 1,
+      "id": 101,
       "userId": 1,
       "cost": 1000
     },
     {
-      "id": 2,
+      "id": 102,
       "userId": 2,
       "cost": 1200
     },
     {
-      "id": 3,
+      "id": 103,
       "userId": 3,
       "cost": 1500
     },
     {
-      "id": 4,
+      "id": 104,
       "userId": 4,
       "cost": 950
     },
     {
-      "id": 5,
+      "id": 105,
       "userId": 5,
       "cost": 1300
     },
     {
-      "id": 6,
+      "id": 106,
       "userId": 6,
       "cost": 1100
     },
     {
-      "id": 7,
+      "id": 107,
       "userId": 7,
       "cost": 1400
     },
     {
-      "id": 8,
+      "id": 108,
       "userId": 8,
       "cost": 1000
     },
     {
-      "id": 9,
+      "id": 109,
       "userId": 9,
       "cost": 1250
     },
     {
-      "id": 10,
+      "id": 110,
       "userId": 10,
       "cost": 950
     }
   ],
-  "clients": [
+  "customers": [
     {
       "id": 1,
       "userId": 201
@@ -263,6 +263,32 @@
     {
       "id": 15,
       "userId": 215
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": 1,
+      "name": "Wedding"
+    },
+    {
+      "id": 2,
+      "name": "Birthday"
+    },
+    {
+      "id": 3,
+      "name": "Holiday"
+    },
+    {
+      "id": 4,
+      "name": "Club/Bar"
+    },
+    {
+      "id": 5,
+      "name": "Corporate"
+    },
+    {
+      "id": 6,
+      "name": "Other"
     }
   ],
   "venues": [
@@ -353,7 +379,7 @@
     {
       "id": 15,
       "name": "Luxury Yacht",
-      "location": "Miami, FL",
+      "location": "Kyoto, Japan",
       "cost": 10000
     }
   ],
@@ -501,7 +527,7 @@
       "addOnsId": 15
     }
   ],
-  "finalDetailsEvents": [
+  "Events": [
     [
       {
         "id": "1",
@@ -510,7 +536,7 @@
         "eventAddOnsId": "1",
         "venueId": "3",
         "date": "2025-08-21",
-        "eventType": "wedding"
+        "eventTypeId": "2"
       },
       {
         "id": "2",
@@ -519,7 +545,7 @@
         "eventAddOnsId": "2",
         "venueId": "1",
         "date": "2025-06-08",
-        "eventType": "club event"
+        "eventTypeId": "3"
       },
       {
         "id": "3",
@@ -528,7 +554,7 @@
         "eventAddOnsId": "3",
         "venueId": "2",
         "date": "2025-07-15",
-        "eventType": "corporate"
+        "eventTypeId": "6"
       },
       {
         "id": "4",
@@ -537,7 +563,7 @@
         "eventAddOnsId": "4",
         "venueId": "4",
         "date": "2025-09-10",
-        "eventType": "wedding"
+        "eventTypeId": "1"
       },
       {
         "id": "5",
@@ -546,7 +572,7 @@
         "eventAddOnsId": "5",
         "venueId": "5",
         "date": "2025-10-02",
-        "eventType": "graduation"
+        "eventTypeId": "6"
       },
       {
         "id": "6",
@@ -555,7 +581,7 @@
         "eventAddOnsId": "6",
         "venueId": "6",
         "date": "2025-10-15",
-        "eventType": "anniversary"
+        "eventTypeId": "5"
       },
       {
         "id": "7",
@@ -564,7 +590,7 @@
         "eventAddOnsId": "7",
         "venueId": "7",
         "date": "2025-11-03",
-        "eventType": "club event"
+        "eventTypeId": "5"
       },
       {
         "id": "8",
@@ -573,7 +599,7 @@
         "eventAddOnsId": "8",
         "venueId": "8",
         "date": "2025-12-25",
-        "eventType": "birthday"
+        "eventTypeId": "3"
       },
       {
         "id": "9",
@@ -582,7 +608,7 @@
         "eventAddOnsId": "9",
         "venueId": "9",
         "date": "2026-01-10",
-        "eventType": "wedding"
+        "eventTypeId": "wedding"
       },
       {
         "id": "10",
@@ -591,7 +617,7 @@
         "eventAddOnsId": "10",
         "venueId": "10",
         "date": "2026-02-14",
-        "eventType": "wedding"
+        "eventTypeId": "4"
       }
     ]
   ]
