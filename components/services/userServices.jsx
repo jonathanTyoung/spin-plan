@@ -16,3 +16,15 @@ export const createUser = (customer) => {
         body: JSON.stringify(customer),
     }).then((res) => res.json())
 }
+
+export const getNonDjUsers = () => {
+    return fetch(`http://localhost:8088/users?isDj=false`).then((res) =>
+        res.json()
+    )
+}
+export const getDjUsers = () => {
+    return fetch(`http://localhost:8088/users?isDj=true`).then((res) =>
+        res.json()
+    )
+}
+

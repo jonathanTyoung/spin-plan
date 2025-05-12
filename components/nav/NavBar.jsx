@@ -9,10 +9,10 @@ export const NavBar = () => {
             <Link to="/">Home</Link>
         </li>
         <li className="navbar-item">
-            <Link to="/CreateEvent">Create Event</Link>
+            <Link to="/event-form">Create Event</Link>
         </li>
         <li className="navbar-item">
-            <Link to="/UpcomingEvents">Upcoming Events</Link>
+            <Link to="/upcoming-events">Upcoming Events</Link>
         </li>
         <li className="navbar-item">
             <Link to="/djs">DJs</Link>
