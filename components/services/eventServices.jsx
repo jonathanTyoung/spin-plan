@@ -23,14 +23,14 @@ export const createEvent = (event) => {
         })
 }
 export const updateEvent = (event) => {
-    return fetch(`http://localhost:8088/events`, {
+    return fetch(`http://localhost:8088/events/${event.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(event),
-    })
-}
+    });
+};
 
 export const getEventTypes = () => {
     return fetch(`http://localhost:8088/eventTypes`).then((res) =>
@@ -41,3 +41,35 @@ export const getAllDJsById = () => {
     return fetch(`http://localhost:8088/DJs/?_expand=user`).then((res) =>
         res.json())
 }
+
+export const getAllEventsWithDJNameAndEventType = async () => {
+    const [events, DJs, users] = await Promise.all([
+        fetch('http://localhost:8088/events').then(res => res.json()),
+        fetch('http://localhost:8088/DJs').then(res => res.json()),
+        fetch('http://localhost:8088/users').then(res => res.json())
+    ]);
+
+    return events.map(event => {
+        const dj = DJs.find(dj => dj.id === Number(event.DJId));
+        const user = dj ? users.find(user => user.id === parseInt(dj.userId)) : null;
+        return {
+            ...event,
+            DJName: user ? user.name : "Unknown DJ",
+            // eventType is now the expanded object, not just the ID
+        };
+    });
+};
+
+export const getEventById = (id) => {
+    return fetch(`http://localhost:8088/events/${id}`)
+        .then(res => res.json());
+};
+
+export const cancelEvent = (eventId) => {
+    return fetch(`http://localhost:8088/events/${eventId}`, {
+        method: "DELETE"
+    }).then(res => {
+        if (!res.ok) throw new Error("Failed to delete event");
+        return true;
+    });
+};

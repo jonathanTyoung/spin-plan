@@ -12,16 +12,35 @@
 }
 
 .event {
-  background-color: var(--white);
+  background-color: lightblue;
   border: 1px solid var(--outline);
   margin: 0.5rem 0;
-  border-radius: 0.5rem;
+  border-radius: 5.5rem;
   padding: 0.5rem;
 }
 
 /* This targets all the child elements of the element with the .event class */
 .event>* {
   padding: 0.5rem;
+}
+
+.upcoming-events-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 2rem 0 1.5rem 0;
+  letter-spacing: 1px;
+}
+
+.event-section {
+  background-color: lightslategray;
+  margin-bottom: 1.5rem;
+  border-radius: 5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* Subtle shadow */
+  border: 2px solid #fff; /* or any color that fits your theme */
+  text-align: center; /* Add this line */
 }
 
 .event-info {
@@ -35,6 +54,7 @@
   border-top: 1px solid var(--outline);
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 /* This targets any element that is a child of a footer that is a child of an element with the .event class */

@@ -44,8 +44,8 @@ export const EventForm = ({ currentUser }) => {
             const newEvent = {
                 userId: currentUser.id,
                 description: event.description,
-                DJ: event.DJId,
-                eventType: event.eventTypeId,
+                DJId: event.DJId,
+                eventTypeId: event.eventTypeId,
                 date: event.date,
                 totalCost: event.totalCost
             }

@@ -9,6 +9,11 @@
   --font-family: 'Nunito', sans-serif;
 }
 
+
+.cyberpunk-background {
+  background-color: #000000; /* Black background */
+}
+
 /* Global body styles */
 body {
   margin: 0;

@@ -185,10 +185,6 @@
       "userId": 204
     },
     {
-      "id": 5,
-      "userId": 205
-    },
-    {
       "id": 6,
       "userId": 206
     },
@@ -207,26 +203,6 @@
     {
       "id": 10,
       "userId": 210
-    },
-    {
-      "id": 11,
-      "userId": 211
-    },
-    {
-      "id": 12,
-      "userId": 212
-    },
-    {
-      "id": 13,
-      "userId": 213
-    },
-    {
-      "id": 14,
-      "userId": 214
-    },
-    {
-      "id": 15,
-      "userId": 215
     }
   ],
   "eventTypes": [
@@ -491,7 +467,50 @@
       "addOnsId": 15
     }
   ],
-  "Events": [
-   
+  "events": [
+    {
+      "userId": 210,
+      "description": "My GramGram's 1000th birthday. ",
+      "DJId": "3",
+      "eventTypeId": "6",
+      "date": "2025-12-20",
+      "totalCost": 1500,
+      "id": 1,
+      "eventType": {
+        "id": 2,
+        "name": "Birthday"
+      }
+    },
+    {
+      "userId": 210,
+      "description": "Office holiday party",
+      "DJId": "9",
+      "eventTypeId": "5",
+      "date": "2025-12-22",
+      "totalCost": 1250,
+      "id": 3,
+      "eventType": {
+        "id": 3,
+        "name": "Holiday"
+      }
+    },
+    {
+      "userId": 210,
+      "description": "Daughter's birthday party",
+      "DJId": "7",
+      "eventTypeId": "6",
+      "date": "2025-12-20",
+      "totalCost": 1400,
+      "id": 6
+    },
+    {
+      "userId": 209,
+      "description": "Husband's birthday",
+      "DJId": "9",
+      "eventTypeId": "2",
+      "date": "2025-12-19",
+      "totalCost": 1250,
+      "id": 7
+    }
   ]
 }
