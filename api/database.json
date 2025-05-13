@@ -92,120 +92,82 @@
     },
     {
       "id": 207,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
+      "name": "Sophia Ramirez",
+      "email": "sophia.r@email.com",
       "isDj": false
     },
     {
       "id": 208,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
+      "name": "Liam Thompson",
+      "email": "liam.t@email.com",
       "isDj": false
     },
     {
       "id": 209,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
+      "name": "Ava Chen",
+      "email": "ava.c@email.com",
       "isDj": false
     },
     {
       "id": 210,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 211,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 212,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 213,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 213,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 214,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
-      "isDj": false
-    },
-    {
-      "id": 215,
-      "name": "Daniel Hernandez",
-      "email": "danielh@email.com",
+      "name": "Ryan Flynn",
+      "email": "flynn@email.com",
       "isDj": false
     }
   ],
-
   "DJs": [
     {
       "id": 1,
-      "userId": 1,
+      "userId": 101,
       "cost": 1000
     },
     {
       "id": 2,
-      "userId": 2,
+      "userId": 102,
       "cost": 1200
     },
     {
       "id": 3,
-      "userId": 3,
+      "userId": 103,
       "cost": 1500
     },
     {
       "id": 4,
-      "userId": 4,
+      "userId": 104,
       "cost": 950
     },
     {
       "id": 5,
-      "userId": 5,
+      "userId": 105,
       "cost": 1300
     },
     {
       "id": 6,
-      "userId": 6,
+      "userId": 106,
       "cost": 1100
     },
     {
       "id": 7,
-      "userId": 7,
+      "userId": 107,
       "cost": 1400
     },
     {
       "id": 8,
-      "userId": 8,
+      "userId": 108,
       "cost": 1000
     },
     {
       "id": 9,
-      "userId": 9,
+      "userId": 109,
       "cost": 1250
     },
     {
       "id": 10,
-      "userId": 10,
+      "userId": 110,
       "cost": 950
     }
   ],
-
-  "clients": [
+  "customers": [
     {
       "id": 1,
       "userId": 201
@@ -221,10 +183,6 @@
     {
       "id": 4,
       "userId": 204
-    },
-    {
-      "id": 5,
-      "userId": 205
     },
     {
       "id": 6,
@@ -245,26 +203,32 @@
     {
       "id": 10,
       "userId": 210
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": 1,
+      "name": "Wedding"
     },
     {
-      "id": 11,
-      "userId": 211
+      "id": 2,
+      "name": "Birthday"
     },
     {
-      "id": 12,
-      "userId": 212
+      "id": 3,
+      "name": "Holiday"
     },
     {
-      "id": 13,
-      "userId": 213
+      "id": 4,
+      "name": "Club/Bar"
     },
     {
-      "id": 14,
-      "userId": 214
+      "id": 5,
+      "name": "Corporate"
     },
     {
-      "id": 15,
-      "userId": 215
+      "id": 6,
+      "name": "Other"
     }
   ],
   "venues": [
@@ -355,7 +319,7 @@
     {
       "id": 15,
       "name": "Luxury Yacht",
-      "location": "Miami, FL",
+      "location": "Kyoto, Japan",
       "cost": 10000
     }
   ],
@@ -503,18 +467,50 @@
       "addOnsId": 15
     }
   ],
-  "finalDetailsEvents": [
-    [
-      { "id": "1", "djId": "5", "clientId": "3", "eventAddOnsId": "1", "venueId": "3", "date": "2025-08-21", "eventType": "wedding" },
-      { "id": "2", "djId": "12", "clientId": "1", "eventAddOnsId": "2", "venueId": "1", "date": "2025-06-08", "eventType": "club event" },
-      { "id": "3", "djId": "6", "clientId": "2", "eventAddOnsId": "3", "venueId": "2", "date": "2025-07-15", "eventType": "corporate" },
-      { "id": "4", "djId": "3", "clientId": "4", "eventAddOnsId": "4", "venueId": "4", "date": "2025-09-10", "eventType": "wedding" },
-      { "id": "5", "djId": "8", "clientId": "5", "eventAddOnsId": "5", "venueId": "5", "date": "2025-10-02", "eventType": "graduation" },
-      { "id": "6", "djId": "7", "clientId": "6", "eventAddOnsId": "6", "venueId": "6", "date": "2025-10-15", "eventType": "anniversary" },
-      { "id": "7", "djId": "10", "clientId": "7", "eventAddOnsId": "7", "venueId": "7", "date": "2025-11-03", "eventType": "club event" },
-      { "id": "8", "djId": "2", "clientId": "8", "eventAddOnsId": "8", "venueId": "8", "date": "2025-12-25", "eventType": "birthday" },
-      { "id": "9", "djId": "1", "clientId": "9", "eventAddOnsId": "9", "venueId": "9", "date": "2026-01-10", "eventType": "wedding" },
-      { "id": "10", "djId": "4", "clientId": "10", "eventAddOnsId": "10", "venueId": "10", "date": "2026-02-14", "eventType": "wedding" }
-    ]
+  "events": [
+    {
+      "userId": 210,
+      "description": "My GramGram's 1000th birthday. ",
+      "DJId": "3",
+      "eventTypeId": "6",
+      "date": "2025-12-20",
+      "totalCost": 1500,
+      "id": 1,
+      "eventType": {
+        "id": 2,
+        "name": "Birthday"
+      }
+    },
+    {
+      "userId": 210,
+      "description": "Office holiday party",
+      "DJId": "9",
+      "eventTypeId": "5",
+      "date": "2025-12-22",
+      "totalCost": 1250,
+      "id": 3,
+      "eventType": {
+        "id": 3,
+        "name": "Holiday"
+      }
+    },
+    {
+      "userId": 210,
+      "description": "Daughter's birthday party",
+      "DJId": "7",
+      "eventTypeId": "6",
+      "date": "2025-12-20",
+      "totalCost": 1400,
+      "id": 6
+    },
+    {
+      "userId": 209,
+      "description": "Husband's birthday",
+      "DJId": "9",
+      "eventTypeId": "2",
+      "date": "2025-12-19",
+      "totalCost": 1250,
+      "id": 7
+    }
   ]
 }

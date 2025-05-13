@@ -1,0 +1,55 @@
+/* index.css */
+
+/* Set up your theme colors */
+:root {
+  --primary-color: #ff0055;
+  --secondary-color: #111111;
+  --accent-color: #f0c000;
+  --bg-color: gray;
+  --font-family: 'Nunito', sans-serif;
+}
+
+
+.cyberpunk-background {
+  background-color: #000000; /* Black background */
+}
+
+/* Global body styles */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e6004c;
+}
+
+/* Card style for event blocks */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1.5em;
+  margin: 1em 0;
+}
+
