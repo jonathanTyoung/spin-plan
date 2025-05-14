@@ -113,6 +113,12 @@
       "name": "Ryan Flynn",
       "email": "flynn@email.com",
       "isDj": false
+    },
+    {
+      "email": "young@email.com",
+      "fullName": "Jonathan",
+      "isDj": true,
+      "id": 211
     }
   ],
   "DJs": [
