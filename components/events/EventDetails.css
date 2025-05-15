@@ -4,7 +4,6 @@ form {
     border-radius: 10px;
     padding: 1rem 0rem 0rem 1rem;
     box-shadow: 1px 2px 5px lightgray;
-    background-color: var(--offWhite);
   }
   
   fieldset {
@@ -28,9 +27,13 @@ form {
     flex-direction: column;
  
   }
-  
- .button-center {
-    display: flex;
-    justify-content: center;
-}
  
+.small-btn {
+  padding: 0.2rem 0.7rem;    /* Smaller padding */
+  font-size: 0.9rem;         /* Smaller text */
+  color: #000;             /* Set your desired text color */
+  border-radius: 0.25rem;
+  box-shadow: none;           /* Remove button shadow */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}

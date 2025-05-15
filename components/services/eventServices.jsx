@@ -43,19 +43,21 @@ export const getAllDJsById = () => {
 }
 
 export const getAllEventsWithDJNameAndEventType = async () => {
-    const [events, DJs, users] = await Promise.all([
+    const [events, DJs, users, eventTypes] = await Promise.all([
         fetch('http://localhost:8088/events').then(res => res.json()),
         fetch('http://localhost:8088/DJs').then(res => res.json()),
-        fetch('http://localhost:8088/users').then(res => res.json())
+        fetch('http://localhost:8088/users').then(res => res.json()),
+        fetch('http://localhost:8088/eventTypes').then(res => res.json())
     ]);
 
-    return events.map(event => {
+    return events?.map(event => {
         const dj = DJs.find(dj => dj.id === Number(event.DJId));
         const user = dj ? users.find(user => user.id === parseInt(dj.userId)) : null;
+        const eventType = eventTypes.find(type => type.id === Number(event.eventTypeId));
         return {
             ...event,
             DJName: user ? user.name : "Unknown DJ",
-            // eventType is now the expanded object, not just the ID
+            eventTypeName: eventType ? eventType.name : "Unknown Event Type"
         };
     });
 };

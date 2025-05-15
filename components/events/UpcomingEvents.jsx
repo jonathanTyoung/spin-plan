@@ -30,7 +30,7 @@ export const UpcomingEvents = ({ currentUser }) => {
 
   return (
     <article className="cyberpunk">
-      <header className="upcoming-events-header">Your Upcoming Events</header>
+      <h2 className="upcoming-events-header">Your Upcoming Events</h2>
       {currentUserEvents.map((eventObj) => (
         <section
           className="event-section"
@@ -39,7 +39,7 @@ export const UpcomingEvents = ({ currentUser }) => {
         >
           <ol>
           <Link to={`/upcoming-events/${eventObj.id}`}>
-          <header className="cyberpunk-select">Event:{eventObj.eventType?.name}</header>
+          <header className="cyberpunk-select">Event:{eventObj.eventTypeName}</header>
             <div>
               <div className="cyberpunk-select">Description of Event</div>
               <div>{eventObj.description}</div>

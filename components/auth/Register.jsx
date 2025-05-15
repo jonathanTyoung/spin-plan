@@ -89,13 +89,13 @@ export const Register = (props) => {
                 type="checkbox"
                 id="isDj"
               />
-              I am a DJ{" "}
+              <h2>I am a DJ{" "}</h2>
             </label>
           </div>
         </fieldset>
         <fieldset>
           <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
+            <button className="cyber-btn" type="submit">
               Register
             </button>
           </div>

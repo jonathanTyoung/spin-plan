@@ -7,6 +7,11 @@ form {
     background-color: var(--offWhite);
   }
   
+  h2 {
+  margin-top: 0;
+  color: #ff003c; /* Change this to any color you want */
+}
+
   fieldset {
     min-width: 0;
     padding-bottom: 1.5rem;

@@ -5,12 +5,14 @@
     padding: 5rem 3rem;
     border: 1px solid var(--outline);
     border-radius: 0.5rem;
+    color: #39ff14; /* neon green, or any color you want */
   }
   
   /* This targets any h1 that is a child of an element with the .welcome-container class */
   .welcome-container > h1 {
     display: flex;
     flex-direction: column;
+    color: #ff003c; /* bright red, or any color you want */
   }
   
 /* Glitched button animation

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventById, updateEvent, getAllDJsById, getEventTypes, cancelEvent } from "../services/EventServices.jsx";
-import "./Form.css";
+import "./EventDetails.css";
 
 export const EventDetails = ({ currentUser }) => {
     const { eventId } = useParams();
@@ -77,13 +77,13 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="">
+                <div className="form-group">
                     <label htmlFor="DJId">Choose DJ</label>
                     <select
                         id="DJId"
                         value={event.DJId || ""}
                         onChange={handleDJChange}
-                        className=""
+                        className="form-control"
                         required
                     >
                         <option value="">Select Your DJ...</option>
@@ -136,10 +136,10 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="button">
+                <div className="small-btn">
                     <button
                         type="submit"
-                        className="form-btn btn-info"
+                        className="cyber-btn"
                         
                     >
                         Update Event
@@ -147,10 +147,10 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="button">
+                <div className="small-btn">
                     <button
                         type="button"
-                        className=""
+                        className="cyber-btn"
                         onClick={handleDelete}
                     >
                         Delete Event
