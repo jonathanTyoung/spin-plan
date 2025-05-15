@@ -488,11 +488,7 @@
       "eventTypeId": "5",
       "date": "2025-12-22",
       "totalCost": 1250,
-      "id": 3,
-      "eventType": {
-        "id": 3,
-        "name": "Holiday"
-      }
+      "id": 3
     },
     {
       "userId": 210,
@@ -501,11 +497,7 @@
       "eventTypeId": "2",
       "date": "2025-12-20",
       "totalCost": 1400,
-      "id": 6,
-      "eventType": {
-        "id": 6,
-        "name": "Other"
-      }
+      "id": 6
     },
     {
       "userId": 209,

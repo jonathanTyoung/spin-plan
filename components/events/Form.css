@@ -26,14 +26,11 @@ form {
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
+ 
   }
   
-  .form-btn {
-    align-self: flex-end;
-  }
-  
-  .form-btn:focus {
-    box-shadow: none;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
+ .button-center {
+    display: flex;
+    justify-content: center;
+}
+ 

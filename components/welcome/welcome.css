@@ -4,7 +4,6 @@
     text-align: center;
     padding: 5rem 3rem;
     border: 1px solid var(--outline);
-    background-color: darkgrey;
     border-radius: 0.5rem;
   }
   
@@ -12,10 +11,81 @@
   .welcome-container > h1 {
     display: flex;
     flex-direction: column;
-    color: var(--primary);
   }
   
-  /* This targets any div that is a child of an element with the .welcome-container class */
-  .welcome-container > div {
-    font-style: italic;
+/* Glitched button animation
+button.cyberpunk.glitched,
+.cyberpunk button.glitched {
+  animation-name: buttonGlitched;
+  animation-duration: calc(var(--glitched-duration, 1s) * 2.1);
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+button.cyberpunk.glitched:before,
+.cyberpunk button.glitched:before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background: inherit;
+  animation-name: buttonBeforeGlitched;
+  animation-duration: calc(var(--glitched-duration, 1s) * 2);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  pointer-events: none;
+  opacity: 0.7;
+  border-radius: inherit;
+}
+
+@keyframes buttonGlitched {
+  0%, 10% {
+    transform: skew(-10deg);
+    left: -2px;
   }
+  11%, 50% {
+    transform: skew(0deg);
+    left: 2px;
+  }
+  51%, 59% {
+    transform: skew(8deg);
+  }
+  60%, 100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes buttonBeforeGlitched {
+  0%, 10% {
+    transform: skew(-10deg);
+    left: -2px;
+    filter: blur(1px);
+  }
+  11%, 50% {
+    transform: skew(0deg);
+    left: 2px;
+    filter: blur(0.5px);
+  }
+  51%, 59% {
+    transform: skew(8deg);
+    filter: blur(2px);
+  }
+  60%, 100% {
+    transform: skew(0deg);
+    filter: blur(0);
+  }
+}
+
+
+button.neon:hover,
+.cyberpunk.neon:hover {
+  background: #fff;
+  color: #0ff;
+  box-shadow:
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 160px #0ff;
+} */

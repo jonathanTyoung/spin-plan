@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getAllEvents, getAllEventsWithDJNameAndEventType } from "../services/EventServices.jsx"
 import "./UpcomingEvents.css"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 
 export const UpcomingEvents = ({ currentUser }) => {
@@ -29,7 +29,7 @@ export const UpcomingEvents = ({ currentUser }) => {
 
 
   return (
-    <article className="event">
+    <article className="cyberpunk">
       <header className="upcoming-events-header">Your Upcoming Events</header>
       {currentUserEvents.map((eventObj) => (
         <section
@@ -37,11 +37,11 @@ export const UpcomingEvents = ({ currentUser }) => {
           key={eventObj.id}
           event={eventObj}
         >
-          <Link to={`/event-details/${eventObj.id}`}>
-          <header className="event-info">Event:{eventObj.eventType?.name}</header>
-          <footer>
+          <ol>
+          <Link to={`/upcoming-events/${eventObj.id}`}>
+          <header className="cyberpunk-select">Event:{eventObj.eventType?.name}</header>
             <div>
-              <div className="event-info">Description of Event</div>
+              <div className="cyberpunk-select">Description of Event</div>
               <div>{eventObj.description}</div>
             </div>
             <div>
@@ -52,8 +52,8 @@ export const UpcomingEvents = ({ currentUser }) => {
               <div className="event-info">Total Cost of Event:</div>
               <div>{formatCurrency(eventObj.totalCost)}</div>
             </div>
-          </footer>
           </Link>
+          </ol>
         </section>
       ))}
     </article>

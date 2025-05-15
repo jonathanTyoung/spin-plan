@@ -23,7 +23,7 @@ export const EventDetails = ({ currentUser }) => {
             setEventTypes(eventTypesData);
             setLoading(false);
         });
-    }, [eventId]);
+    }, [eventId, currentUser]);
 
     if (loading || !event) return <div>Loading...</div>;
 
@@ -77,13 +77,13 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="">
                     <label htmlFor="DJId">Choose DJ</label>
                     <select
                         id="DJId"
                         value={event.DJId || ""}
                         onChange={handleDJChange}
-                        className="form-control"
+                        className=""
                         required
                     >
                         <option value="">Select Your DJ...</option>
@@ -136,7 +136,7 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="button">
                     <button
                         type="submit"
                         className="form-btn btn-info"
@@ -147,10 +147,10 @@ export const EventDetails = ({ currentUser }) => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="button">
                     <button
                         type="button"
-                        className="form-btn btn-info"
+                        className=""
                         onClick={handleDelete}
                     >
                         Delete Event
