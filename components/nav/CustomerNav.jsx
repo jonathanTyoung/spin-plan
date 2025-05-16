@@ -15,8 +15,8 @@ export const CustomerNav = () => {
                 &#9776; {/* Unicode hamburger icon */}
             </button>
             <ul className={`nav-list${open ? " open" : ""}`} >
-
-                <li className="cyber-btn">
+                <li className="cyber-btn"
+                    >
                     <Link to="/">
                         <span className="cyber-glitch">Home</span>
                         <span>Home</span>
@@ -38,6 +38,12 @@ export const CustomerNav = () => {
                     <Link to="/DJs">
                         <span className="cyber-glitch">DJs</span>
                         <span>DJs</span>
+                    </Link>
+                </li>
+                <li className="cyber-btn">
+                    <Link to="/add-ons">
+                        <span className="cyber-glitch">DJs</span>
+                        <span>Additional Packages</span>
                     </Link>
                 </li>
                 {localStorage.getItem("spin_plan_user") ? (

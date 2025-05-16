@@ -13,6 +13,10 @@
   color: #ff003c; /* bright red, or any color you want */
 }
 
+.event-section div {
+  margin-bottom: 1rem;
+}
+
 .event {
   background-color: lightblue;
   border: 1px solid var(--outline);

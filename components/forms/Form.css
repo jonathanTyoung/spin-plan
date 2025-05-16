@@ -25,12 +25,14 @@ form {
     font-size: 1rem;
     border: 1px solid var(--outline);
     border-radius: 0.25rem;
+    color: #000;
   }
   
   .form-group {
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
+    color: #ff003c;
   }
   
   .form-btn {

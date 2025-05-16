@@ -39,18 +39,18 @@ export const UpcomingEvents = ({ currentUser }) => {
         >
           <ol>
           <Link to={`/upcoming-events/${eventObj.id}`}>
-          <header className="cyberpunk-select">Event:{eventObj.eventTypeName}</header>
+          <header className="event-info">Event:{eventObj.eventTypeName}</header>
             <div>
-              <div className="cyberpunk-select">Description of Event</div>
+              <div className="event-info"></div>
               <div>{eventObj.description}</div>
             </div>
             <div>
-              <div className="event-info">DJ Name</div>
-              <div>{eventObj.DJName}</div>
+              <div className="event-info"></div>
+              <div>DJ: {eventObj.DJName}</div>
             </div>
             <div>
-              <div className="event-info">Total Cost of Event:</div>
-              <div>{formatCurrency(eventObj.totalCost)}</div>
+              <div className="event-info"></div>
+              <div>Total Cost: {formatCurrency(eventObj.totalCost)}</div>
             </div>
           </Link>
           </ol>

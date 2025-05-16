@@ -130,7 +130,7 @@ export const EventDetails = ({ currentUser }) => {
             <fieldset>
                 <div className="form-group">
                     <label>Total Cost</label>
-                    <div className="form-control">
+                    <div className="form-group">
                         ${event.totalCost || 0}
                     </div>
                 </div>

@@ -1,14 +1,16 @@
-.DJs-container {
+.DJs {
   display: flex;
   flex-direction: column;
 }
 
 .DJs-container {
   margin: 1rem 5rem 0rem 5rem;
+  color: #ff003c; /* bright red, or any color you want */
 }
 
-.DJs-container>h2 {
+.DJs-container> h2 {
   margin-top: 0;
+  color: #ff003c; /* bright red, or any color you want */
 }
 
 .DJ {
@@ -19,27 +21,34 @@
   padding: 0.5rem;
 }
 
-/* This targets all the child elements of the element with the .DJ class */
-.DJ>* {
+/* This targets all the child elements of the element with the .event class */
+.event>* {
   padding: 0.5rem;
 }
 
-.upcoming-DJs-header {
+.upcoming-events-header {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: #ff003c; /* bright red, or any color you want */
   margin: 2rem 0 1.5rem 0;
   letter-spacing: 1px;
 }
 
 .DJ-section {
   margin-bottom: 1.5rem;
-  border-radius: 5rem;
   padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12); /* Subtle shadow */
-  border: 2px solid #fff; /* or any color that fits your theme */
-  text-align: center; /* Add this line */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border: 8px solid transparent; /* Make border thick enough to show SVG */
+  text-align: center;
+  color: #ff003c;
+  margin: 1rem auto;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 0; /* Remove rounded corners for a sharper look */
+
+  /* Polygonal border using SVG */
+  border-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="0,10 10,0 30,0 40,10 40,30 30,40 10,40 0,30" stroke="white" stroke-width="4" fill="none"/></svg>') 20 stretch;
 }
 
 .filter-bar {

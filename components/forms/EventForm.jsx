@@ -157,7 +157,7 @@ export const EventForm = ({ currentUser }) => {
             <fieldset>
                 <div className="form-group">
                     <label>Total Cost</label>
-                    <div className="form-control">
+                    <div className="form-group">
                         ${event.totalCost || 0}
                     </div>
                 </div>
@@ -165,7 +165,7 @@ export const EventForm = ({ currentUser }) => {
             <fieldset>
                 <div className="form-group">
                     <button
-                        className="form-btn btn-info"
+                        className="cyber-btn"
                         onClick={handleSave}
                     >
                         Submit Event

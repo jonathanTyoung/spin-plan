@@ -3,8 +3,8 @@ import { Welcome } from "../welcome/Welcome.jsx"
 import { EventForm } from "../forms/EventForm.jsx"
 import { UpcomingEvents } from "../events/UpcomingEvents.jsx"
 import { EventDetails } from "../events/EventDetails.jsx"
-import { CustomerNav,  } from "../nav/CustomerNav.jsx"
-import { DJList } from "../djs/DJList.jsx"
+import { CustomerNav, } from "../nav/CustomerNav.jsx"
+import { DJList } from "../djs/djList.jsx"
 
 
 
@@ -22,14 +22,16 @@ export const CustomerViews = ({ currentUser }) => {
             >
                 <Route index element={<Welcome />} />
                 <Route path="event-form" element={<EventForm currentUser={currentUser} />} />
-                <Route path="upcoming-events">
-                    <Route index element={<UpcomingEvents currentUser={currentUser} />} />
-                    <Route path=":eventId" element={<EventDetails currentUser={currentUser} />} />
-                <Route path="DJs"> 
-                    <Route index element={< DJList currentUser={currentUser} />} />
+            
 
-                    </Route>
-                </Route>
+            <Route path="upcoming-events">
+                <Route index element={<UpcomingEvents currentUser={currentUser} />} />
+                <Route path=":eventId" element={<EventDetails currentUser={currentUser} />} />
+            </Route>
+
+            <Route path="DJs">
+                <Route index element={< DJList currentUser={currentUser} />} />
+            </Route>
             </Route>
         </Routes >
     )

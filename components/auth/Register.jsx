@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
 import { createUser, getUserByEmail } from "../services/userServices.jsx"
+import { createDJ } from "../services/djServices.jsx"
 
 
 export const Register = (props) => {
@@ -23,7 +24,20 @@ export const Register = (props) => {
           })
         )
 
-        navigate("/")
+        if (createdUser.isDj) {
+          const newDJ = {
+            userId: createdUser.id,
+            cost: 0,
+            bio: "",
+            experienceLevel: ""
+          }
+
+          createDJ(newDJ).then(() => {
+            navigate("/")
+          })
+        } else {
+          navigate("/")
+        }
       }
     })
   }

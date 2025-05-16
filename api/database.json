@@ -4,60 +4,70 @@
       "id": 101,
       "name": "John Baker",
       "email": "dj1@musicflow.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 102,
       "name": "Jane Bittell",
       "email": "dj2@rhythmsound.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 103,
       "name": "Alice Johnson",
       "email": "dj3@partybeats.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 104,
       "name": "Robert Williams",
       "email": "dj4@vibeset.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 105,
       "name": "Maria Garcia",
       "email": "dj5@thebeat.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 106,
       "name": "David Lee",
       "email": "dj6@tunesonic.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 107,
       "name": "Olivia Martinez",
       "email": "dj7@soundwave.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 108,
       "name": "Ethan Clark",
       "email": "dj8@mixmaster.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 109,
       "name": "Sophia Harris",
       "email": "dj9@spinsounds.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 110,
       "name": "Michael Brown",
       "email": "dj10@bassdrop.com",
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
@@ -507,24 +517,6 @@
       "date": "2025-12-19",
       "totalCost": 1250,
       "id": 7
-    },
-    {
-      "userId": 210,
-      "description": "Testing or a Holiday Party ",
-      "DJId": "8",
-      "eventTypeId": "3",
-      "date": "2025-12-25",
-      "totalCost": 1000,
-      "id": 8
-    },
-    {
-      "userId": 210,
-      "description": "Testing number 2 for eventType display",
-      "DJId": "10",
-      "eventTypeId": "6",
-      "date": "1212-12-12",
-      "totalCost": 950,
-      "id": 9
     }
   ]
 }
