@@ -1,79 +1,13 @@
 .events {
-  display: flex;
-  flex-direction: column;
-}
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center; /* optional */
+  font-family: 'Exo 2', sans-serif;
 
-.events-container {
-  margin: 1rem 5rem 0rem 5rem;
-  color: #ff003c; /* bright red, or any color you want */
-}
-
-.events-container> h2 {
-  margin-top: 0;
-  color: #ff003c; /* bright red, or any color you want */
-}
-
-.event-section div {
-  margin-bottom: 1rem;
-}
-
-.event {
-  background-color: lightblue;
-  border: 1px solid var(--outline);
-  margin: 0.5rem 0;
-  border-radius: 5.5rem;
-  padding: 0.5rem;
-}
-
-/* This targets all the child elements of the element with the .event class */
-.event>* {
-  padding: 0.5rem;
 }
 
 .upcoming-events-header {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ff003c; /* bright red, or any color you want */
-  margin: 2rem 0 1.5rem 0;
-  letter-spacing: 1px;
-}
+    font-family: 'Exo 2', sans-serif;
 
-.event-section {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-  border: 8px solid transparent; /* Make border thick enough to show SVG */
-  text-align: center;
-  color: #ff003c;
-  margin: 1rem auto;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 0; /* Remove rounded corners for a sharper look */
-
-  /* Polygonal border using SVG */
-  border-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="0,10 10,0 30,0 40,10 40,30 30,40 10,40 0,30" stroke="white" stroke-width="4" fill="none"/></svg>') 20 stretch;
-}
-
-.filter-bar {
-  display: flex;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.cyberpunk select {
-  width: calc(100% - 30px);
-  border: 30px solid var(--black-color);
-  border-left: 5px solid var(--black-color);
-  border-right: 5px solid var(--black-color);
-  border-bottom: 15px solid var(--black-color);
-  clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
-  margin-bottom: 10px;
-  padding: 12px;
-  font-size: 1.7rem;
-  font-weight: 700;
-  /*caret-shape: underscore;*/
 }

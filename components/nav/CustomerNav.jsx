@@ -8,61 +8,56 @@ export const CustomerNav = () => {
 
     return (
         <nav className="navbar">
-            <button
-                className="hamburger"
-                onClick={() => setOpen((prev) => !prev)}
-                aria-label="Toggle navigation">
-                &#9776; {/* Unicode hamburger icon */}
-            </button>
-            <ul className={`nav-list${open ? " open" : ""}`} >
-                <li className="cyber-btn"
-                    >
-                    <Link to="/">
-                        <span className="cyber-glitch">Home</span>
-                        <span>Home</span>
-                    </Link>
-                </li>
-                <li className="cyber-btn">
-                    <Link to="/event-form">
-                        <span className="cyber-glitch">Create Event</span>
-                        <span>Create Event</span>
-                    </Link>
-                </li>
-                <li className="cyber-btn">
-                    <Link to="/upcoming-events">
-                        <span className="cyber-glitch">Upcoming Events</span>
-                        <span>Upcoming Events</span>
-                    </Link>
-                </li>
-                <li className="cyber-btn">
-                    <Link to="/DJs">
-                        <span className="cyber-glitch">DJs</span>
-                        <span>DJs</span>
-                    </Link>
-                </li>
-                <li className="cyber-btn">
-                    <Link to="/add-ons">
-                        <span className="cyber-glitch">DJs</span>
-                        <span>Additional Packages</span>
-                    </Link>
-                </li>
-                {localStorage.getItem("spin_plan_user") ? (
-                    <li className="cyber-btn">
-                        <Link
-                            to="/login"
-                            onClick={() => {
-                                localStorage.removeItem("spin_plan_user")
-                                navigate("/", { replace: true })
-                            }}
-                        >
-                            <span className="cyber-glitch">Logout</span>
-                            <span>Logout</span>
-                        </Link>
-                    </li>
-                ) : (
-                    ""
-                )}
-            </ul>
-        </nav>
-    );
+  <button className="hamburger" onClick={() => setOpen(!open)}>
+    ☰
+  </button>
+
+  <ul className={`nav-list ${open ? "open" : ""}`}>
+    <li className="cyber-btn">
+      <Link to="/">
+        <span className="cyber-glitch">Home</span>
+        <span>Home</span>
+      </Link>
+    </li>
+    <li className="cyber-btn">
+      <Link to="/event-form">
+        <span className="cyber-glitch">Create Event</span>
+        <span>Create Event</span>
+      </Link>
+    </li>
+    <li className="cyber-btn">
+      <Link to="/upcoming-events">
+        <span className="cyber-glitch">Upcoming Events</span>
+        <span>Upcoming Events</span>
+      </Link>
+    </li>
+    <li className="cyber-btn">
+      <Link to="/DJs">
+        <span className="cyber-glitch">DJs</span>
+        <span>DJs</span>
+      </Link>
+    </li>
+    <li className="cyber-btn">
+      <Link to="/add-on-list">
+        <span className="cyber-glitch">Additional Packages</span>
+        <span>Additional Packages</span>
+      </Link>
+    </li>
+    {localStorage.getItem("spin_plan_user") && (
+      <li className="cyber-btn">
+        <Link
+          to="/login"
+          onClick={() => {
+            localStorage.removeItem("spin_plan_user");
+            navigate("/", { replace: true });
+          }}
+        >
+          <span className="cyber-glitch">Logout</span>
+          <span>Logout</span>
+        </Link>
+      </li>
+    )}
+  </ul>
+</nav>
+    )
 };

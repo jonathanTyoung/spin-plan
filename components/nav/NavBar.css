@@ -41,7 +41,7 @@
   margin: 0;
   list-style: none;
 }
-/* 
+
 @media (max-width: 800px) {
   .hamburger {
     display: block;
@@ -64,7 +64,7 @@
     align-items: center;
     position: relative;
   }
-} */
+}
 
 body .cyber-btn + .cyber-btn {
   margin-top: 2rem;

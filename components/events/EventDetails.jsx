@@ -97,7 +97,7 @@ export const EventDetails = ({ currentUser }) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="eventTypeId">Choose Event Type</label>
+                    <label className="label-color" htmlFor="eventTypeId">Choose Event Type</label>
                     <select
                         id="eventTypeId"
                         value={event.eventTypeId || ""}

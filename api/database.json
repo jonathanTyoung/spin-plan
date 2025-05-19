@@ -4,70 +4,60 @@
       "id": 101,
       "name": "John Baker",
       "email": "dj1@musicflow.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 102,
       "name": "Jane Bittell",
       "email": "dj2@rhythmsound.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 103,
       "name": "Alice Johnson",
       "email": "dj3@partybeats.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 104,
       "name": "Robert Williams",
       "email": "dj4@vibeset.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 105,
       "name": "Maria Garcia",
       "email": "dj5@thebeat.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 106,
       "name": "David Lee",
       "email": "dj6@tunesonic.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 107,
       "name": "Olivia Martinez",
       "email": "dj7@soundwave.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 108,
       "name": "Ethan Clark",
       "email": "dj8@mixmaster.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 109,
       "name": "Sophia Harris",
       "email": "dj9@spinsounds.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
       "id": 110,
       "name": "Michael Brown",
       "email": "dj10@bassdrop.com",
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "isDj": true
     },
     {
@@ -129,52 +119,118 @@
     {
       "id": 1,
       "userId": 101,
-      "cost": 1000
+      "cost": 1000,
+      "availabilityType": "dates",
+      "availableDates": [
+        "2025-06-01",
+        "2025-06-15",
+        "2025-07-04"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 2,
       "userId": 102,
-      "cost": 1200
+      "cost": 1200,
+      "availabilityType": "always",
+      "availableDates": [],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 3,
       "userId": 103,
-      "cost": 1500
+      "cost": 1500,
+      "availabilityType": "range",
+      "availableRange": {
+        "start": "2025-06-01",
+        "end": "2025-08-31"
+      },
+      "weeklySchedule": [
+        "Friday",
+        "Saturday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 4,
       "userId": 104,
-      "cost": 950
+      "cost": 950,
+      "availabilityType": "weekly",
+      "weeklySchedule": [
+        "Friday",
+        "Saturday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 5,
       "userId": 105,
-      "cost": 1300
+      "cost": 1300,
+      "availabilityType": "range",
+      "availableRange": {
+        "start": "2025-05-20",
+        "end": "2025-07-15"
+      },
+      "weeklySchedule": [
+        "Thursday",
+        "Sunday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 6,
       "userId": 106,
-      "cost": 1100
+      "cost": 1100,
+      "availabilityType": "always",
+      "availableDates": [],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 7,
       "userId": 107,
-      "cost": 1400
+      "cost": 1400,
+      "availabilityType": "weekly",
+      "weeklySchedule": [
+        "Thursday",
+        "Sunday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 8,
       "userId": 108,
-      "cost": 1000
+      "cost": 1000,
+      "availabilityType": "range",
+      "availableRange": {
+        "start": "2025-06-01",
+        "end": "2025-06-30"
+      },
+      "weeklySchedule": [
+        "Saturday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 9,
       "userId": 109,
-      "cost": 1250
+      "cost": 1250,
+      "availabilityType": "dates",
+      "availableDates": [
+        "2025-07-01",
+        "2025-07-04",
+        "2025-07-07"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 10,
       "userId": 110,
-      "cost": 950
+      "cost": 950,
+      "availabilityType": "weekly",
+      "weeklySchedule": [
+        "Saturday"
+      ],
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     }
   ],
   "customers": [
@@ -333,7 +389,7 @@
       "cost": 10000
     }
   ],
-  "addOns": [
+  "addOn": [
     {
       "id": 1,
       "name": "Photobooth",
@@ -352,16 +408,11 @@
     {
       "id": 4,
       "name": "Additional Time (1 Hour)",
-      "cost": 200
-    },
-    {
-      "id": 5,
-      "name": "DJ + Live Musician Combo",
-      "cost": 500
+      "cost": 100
     },
     {
       "id": 6,
-      "name": "Laser Light Show",
+      "name": "Uplighting",
       "cost": 350
     },
     {
@@ -380,101 +431,89 @@
       "cost": 300
     },
     {
-      "id": 10,
-      "name": "Live Band Performance",
-      "cost": 800
-    },
-    {
-      "id": 11,
-      "name": "Catering Service",
-      "cost": 2000
-    },
-    {
-      "id": 12,
-      "name": "Event Photographer",
-      "cost": 1500
-    },
-    {
-      "id": 13,
-      "name": "Event Videographer",
-      "cost": 1800
-    },
-    {
-      "id": 14,
-      "name": "Car Service for Guests",
-      "cost": 1200
-    },
-    {
-      "id": 15,
-      "name": "Event Security Staff",
-      "cost": 500
-    },
-    {
-      "id": 16,
-      "name": "Fireworks Display",
-      "cost": 2500
-    },
-    {
       "id": 17,
       "name": "Dancefloor LED Lights",
       "cost": 450
     },
     {
       "id": 18,
-      "name": "Chill-out Lounge Area",
-      "cost": 1000
+      "name": "Extra Speaker",
+      "cost": 150
     },
     {
       "id": 19,
-      "name": "Saxophone Performance",
-      "cost": 400
-    },
-    {
-      "id": 20,
-      "name": "Violin Performance",
-      "cost": 350
+      "name": "Extra Wireless Microphone",
+      "cost": 75
     }
   ],
-  "eventAddOns": [
+  "djAddOns": [
     {
-      "ID": 1,
-      "addOnsId": 1
+      "djId": 1,
+      "addOnId": 1
     },
     {
-      "ID": 2,
-      "addOnsId": 3
+      "djId": 1,
+      "addOnId": 4
     },
     {
-      "ID": 3,
-      "addOnsId": 4
+      "djId": 2,
+      "addOnId": 3
     },
     {
-      "ID": 4,
-      "addOnsId": 7
+      "djId": 2,
+      "addOnId": 7
     },
     {
-      "ID": 5,
-      "addOnsId": 9
+      "djId": 3,
+      "addOnId": 1
     },
     {
-      "ID": 6,
-      "addOnsId": 11
+      "djId": 3,
+      "addOnId": 2
     },
     {
-      "ID": 7,
-      "addOnsId": 12
+      "djId": 3,
+      "addOnId": 9
     },
     {
-      "ID": 8,
-      "addOnsId": 13
+      "djId": 4,
+      "addOnId": 8
     },
     {
-      "ID": 9,
-      "addOnsId": 14
+      "djId": 5,
+      "addOnId": 1
     },
     {
-      "ID": 10,
-      "addOnsId": 15
+      "djId": 5,
+      "addOnId": 7
+    },
+    {
+      "djId": 6,
+      "addOnId": 4
+    },
+    {
+      "djId": 6,
+      "addOnId": 18
+    },
+    {
+      "djId": 7,
+      "addOnId": 6
+    },
+    {
+      "djId": 8,
+      "addOnId": 19
+    },
+    {
+      "djId": 9,
+      "addOnId": 17
+    },
+    {
+      "djId": 9,
+      "addOnId": 2
+    },
+    {
+      "djId": 10,
+      "addOnId": 19
     }
   ],
   "events": [

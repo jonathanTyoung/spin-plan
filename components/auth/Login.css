@@ -1,5 +1,6 @@
 .container-login {
   text-align: center;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .container-login > section > a {
@@ -8,8 +9,8 @@
 }
 
 .form-login {
-  width: 60%;
-  margin: 2rem auto;
+  width: 150%;
+  margin: 2rem 2rem;
 }
 
 .form-login > h1 {
@@ -20,6 +21,7 @@
 .form-login > h2 {
   text-align: center;
   font-size: 1.5rem;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .form-login > fieldset > input[type="email"] {
@@ -28,12 +30,14 @@
 
 .login-btn {
   align-self: flex-end;
+  font-family: 'Exo 2', sans-serif;
 }
 
 .login-btn:focus {
   box-shadow: none;
   outline: 2px solid transparent;
   outline-offset: 2px;
+  font-family: 'Exo 2', sans-serif;
 }
 
 /************* FORM STYLES *************/

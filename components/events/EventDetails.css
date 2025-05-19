@@ -19,13 +19,14 @@ form {
     font-size: 1rem;
     border: 1px solid var(--outline);
     border-radius: 0.25rem;
+    background-color: #FBD0A6;
   }
   
   .form-group {
     margin-right: 1rem;
     display: flex;
     flex-direction: column;
-    color: #ff003c;
+    color: #B11016;
  
   }
  
@@ -37,4 +38,8 @@ form {
   box-shadow: none;           /* Remove button shadow */
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+}
+
+.label-color {
+  color: #B11016;
 }

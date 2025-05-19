@@ -5,7 +5,7 @@ import "./Login.css"
 import { getUserByEmail } from "../services/userServices.jsx"
 
 export const Login = () => {
-    const [email, set] = useState("flynn@email.com")
+    const [email, set] = useState("dj1@musicflow.com")
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
@@ -21,12 +21,15 @@ export const Login = () => {
                         isDJ: user.isDj,
                     })
                 )
-
-                navigate("/")
-            } else {
-                window.alert("Invalid login")
-            }
-        })
+                if (user.isDj) {
+                    navigate("/profile")
+                } else {
+                    navigate("/")
+                }
+                } else {
+                    window.alert("Invalid login")
+                }
+            })
     }
 
     return (

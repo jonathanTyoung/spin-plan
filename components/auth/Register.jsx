@@ -29,11 +29,14 @@ export const Register = (props) => {
             userId: createdUser.id,
             cost: 0,
             bio: "",
-            experienceLevel: ""
+            experienceLevel: "",
+            availabilityType: "",
+            availabilityDates: [],
+            sample: "" 
           }
 
           createDJ(newDJ).then(() => {
-            navigate("/")
+            navigate("/profile")
           })
         } else {
           navigate("/")

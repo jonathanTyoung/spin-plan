@@ -62,7 +62,7 @@ export const EventForm = ({ currentUser }) => {
     }
 
     return (
-        <form>
+        <form className="form-container">
             <h2>Create New Event</h2>
             <fieldset>
                 <div className="form-group">

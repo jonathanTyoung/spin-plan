@@ -1,0 +1,41 @@
+.dj-card {
+    background-color: #2ABA9E;
+    border: 1px solid #ff003c;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    color: #ff003c;
+    font-family: 'Exo 2', sans-serif;
+    color: #ff003c;
+}
+
+.dj-card__header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #2ABA9E;
+}
+
+.dj-card__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: #2ABA9E;
+}
+
+.dj-card__label {
+    font-weight: 600;
+    width: 40%;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #2ABA9E;
+}
+
+.dj-card__value {
+    width: 100%;
+    text-align: left;
+    font-family: 'Exo 2', sans-serif;
+    background-color: #2ABA9E;
+
+}

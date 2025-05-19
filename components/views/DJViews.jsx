@@ -6,13 +6,14 @@ import { EventDetails } from "../events/EventDetails.jsx"
 import { CustomerNav, } from "../nav/CustomerNav.jsx"
 import { DJList } from "../djs/djList.jsx"
 import { AddOnList } from "../addOn/addOnList.jsx"
-import VinylButton from "../welcome/VinylButton.jsx"
+import { VinylButton } from "../welcome/VinylButton.jsx"
+import { Profile } from "../djs/Profile.jsx"
 import { DJNav } from "../nav/DJNav.jsx"
 
 
 
 
-export const CustomerViews = ({ currentUser }) => {
+export const DJViews = ({ currentUser }) => {
     return (
         <Routes>
             <Route
@@ -38,6 +39,10 @@ export const CustomerViews = ({ currentUser }) => {
 
                 <Route path="add-on-list">
                     <Route index element={< AddOnList currentUser={currentUser} />} />
+                </Route>
+
+                <Route path="profile" element={<Profile currentUser={currentUser} />} />
+                    <Route index element="/:DJId?">
                 </Route>
 
 

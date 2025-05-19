@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-// import { EmployeeViews } from "./EmployeeViews.jsx"
 import { CustomerViews } from "./CustomerViews.jsx"
+import { DJViews } from "./DJViews.jsx"
 
 export const ApplicationViews = () => {
   const [currentUser, setCurrentUser] = useState({})
@@ -13,13 +13,9 @@ export const ApplicationViews = () => {
   }, [])
 
 
-return (
-    <CustomerViews currentUser={currentUser}/>
-)
+return ( currentUser.isDJ ? (
+  <CustomerViews currentUser={currentUser} /> 
+) : ( 
+  <DJViews currentUser={currentUser} />
+))
 }
-//   return currentUser.isDJ ? (
-//   <EmployeeViews currentUser={currentUser} /> 
-// ) : ( 
-//   <CustomerViews currentUser={currentUser} />
-// )
-// }
