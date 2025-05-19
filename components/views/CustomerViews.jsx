@@ -7,7 +7,6 @@ import { CustomerNav, } from "../nav/CustomerNav.jsx"
 import { DJList } from "../djs/djList.jsx"
 import { AddOnList } from "../addOn/addOnList.jsx"
 import VinylButton from "../welcome/VinylButton.jsx"
-import { DJNav } from "../nav/DJNav.jsx"
 
 
 
@@ -19,7 +18,7 @@ export const CustomerViews = ({ currentUser }) => {
                 path="/"
                 element={
                     <>
-                        <DJNav />
+                        <CustomerNav />
                         <Outlet />
                     </>
                 }

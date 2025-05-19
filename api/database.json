@@ -120,19 +120,17 @@
       "id": 1,
       "userId": 101,
       "cost": 1000,
-      "availabilityType": "dates",
-      "availableDates": [
-        "2025-06-01",
-        "2025-06-15",
-        "2025-07-04"
-      ],
+      "bio": "Super hype Club DJ",
+      "experienceLevel": "",
+      "availabilityType": "Weekly",
+      "availableDays": ["Friday", "Saturday", "Sunday"],
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
     {
       "id": 2,
       "userId": 102,
       "cost": 1200,
-      "availabilityType": "always",
+      "availabilityType": "Always",
       "availableDates": [],
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     },
@@ -140,11 +138,7 @@
       "id": 3,
       "userId": 103,
       "cost": 1500,
-      "availabilityType": "range",
-      "availableRange": {
-        "start": "2025-06-01",
-        "end": "2025-08-31"
-      },
+      "availabilityType": "Weekly",
       "weeklySchedule": [
         "Friday",
         "Saturday"
@@ -155,7 +149,7 @@
       "id": 4,
       "userId": 104,
       "cost": 950,
-      "availabilityType": "weekly",
+      "availabilityType": "Weekly",
       "weeklySchedule": [
         "Friday",
         "Saturday"
@@ -233,6 +227,91 @@
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     }
   ],
+
+"availabilityTypes": [
+  {
+    "id": 1,
+    "name": "Always"
+  },
+  {
+    "id": 2,
+    "name": "Weekly"
+  },
+  {
+    "id": 3,
+    "name": "Weekends Only"
+  },
+  {
+    "id": 4,
+    "name": "Currently Unavailable"
+  }
+],
+
+"experienceLevels": [
+  {
+    "id": 1,
+    "name": "0-2 years"
+  },
+  {
+    "id": 2,
+    "name": "3-5 years"
+  },
+  {
+    "id": 3,
+    "name": "5-7 years"
+  },
+  {
+    "id": 4,
+    "name": "7-10 years"
+  },
+  {
+    "id": 5,
+    "name": "10+ years"
+  }
+],
+
+"availableDays": [
+  {
+    "id": 1,
+    "name": "Monday"
+  },
+  {
+    "id": 2,
+    "name": "Tuesday"
+  },
+  {
+    "id": 3,
+    "name": "Wednesday"
+  },
+  {
+    "id": 4,
+    "name": "Thursday"
+  },
+  {
+    "id": 5,
+    "name": "Friday"
+  },
+  {
+    "id": 6,
+    "name": "Saturday"
+  },
+  {
+    "id": 7,
+    "name": "Sunday"
+  },
+  {
+    "id": 8,
+    "name": "Everyday"
+  },
+  {
+    "id": 9,
+    "name": "None"
+  }
+
+],
+
+
+
   "customers": [
     {
       "id": 1,

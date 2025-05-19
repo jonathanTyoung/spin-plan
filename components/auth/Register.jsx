@@ -31,7 +31,7 @@ export const Register = (props) => {
             bio: "",
             experienceLevel: "",
             availabilityType: "",
-            availabilityDates: [],
+            availableDays: [],
             sample: "" 
           }
 

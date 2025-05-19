@@ -1,19 +1,19 @@
-import { Outlet, Route, Routes } from "react-router-dom"
+import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router-dom"
 import { Welcome } from "../welcome/Welcome.jsx"
 import { EventForm } from "../forms/EventForm.jsx"
 import { UpcomingEvents } from "../events/UpcomingEvents.jsx"
 import { EventDetails } from "../events/EventDetails.jsx"
-import { CustomerNav, } from "../nav/CustomerNav.jsx"
 import { DJList } from "../djs/djList.jsx"
 import { AddOnList } from "../addOn/addOnList.jsx"
 import { VinylButton } from "../welcome/VinylButton.jsx"
-import { Profile } from "../djs/Profile.jsx"
+import { DJProfile } from "../djs/DJProfile.jsx"
 import { DJNav } from "../nav/DJNav.jsx"
-
-
+import { DJDetails } from "../djs/DjDetails.jsx"
 
 
 export const DJViews = ({ currentUser }) => {
+    const navigate = useNavigate()
+
     return (
         <Routes>
             <Route
@@ -41,11 +41,12 @@ export const DJViews = ({ currentUser }) => {
                     <Route index element={< AddOnList currentUser={currentUser} />} />
                 </Route>
 
-                <Route path="profile" element={<Profile currentUser={currentUser} />} />
-                    <Route index element="/:DJId?">
-                </Route>
-
-
+                <Route
+                    path="profile"
+                    element={<Navigate to={`/profile/${currentUser.id}`} replace />}/>
+                <Route path="profile/:DJId" element={<DJProfile currentUser={currentUser} />} />
+                    <Route path=":userId" element={< DJDetails currentUser={currentUser} />} />
+            
             </Route>
         </Routes >
     )

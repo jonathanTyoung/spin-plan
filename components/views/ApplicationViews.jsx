@@ -14,8 +14,8 @@ export const ApplicationViews = () => {
 
 
 return ( currentUser.isDJ ? (
-  <CustomerViews currentUser={currentUser} /> 
+  <DJViews currentUser={currentUser} /> 
 ) : ( 
-  <DJViews currentUser={currentUser} />
+  <CustomerViews currentUser={currentUser} />
 ))
 }

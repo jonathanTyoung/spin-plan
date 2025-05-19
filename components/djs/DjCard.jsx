@@ -25,14 +25,12 @@ return (
         {allDJs.map((DJObj) => (
             <section key={DJObj.id} className="DJ-section">
                 <div className="dj-card">
-                    <Link to={`/upcoming-djs/${DJObj.id}`}>
-                        <header className="dj-card__header">Dj: {DJObj.name}</header>
+                        <header className="dj-card__header">Dj: {DJObj.user.name}</header>
 
                         <div className="dj-card__row">
                             <div className="dj-card__label">Price:</div>
                             <div className="dj-card__value">{DJObj.cost}</div>
                         </div>
-                        </Link>
                         <div className="DJ-label">
                             Sample:{" "}
                             {DJObj.sample ? (
