@@ -1,4 +1,3 @@
-
 export const getAllDJsByUserId = () => {
     return fetch(`http://localhost:8088/DJs?_expand=user`).then((res) => res.json())
 }
@@ -11,16 +10,6 @@ export const createDJ = (djData) => {
         },
         body: JSON.stringify(djData),
     }).then((res) => res.json())
-}
-
-export const updateDJProfile = (DJId) => {
-    return fetch(`http://localhost:8088/DJs?_expand=user`, {
-        method: "PUT",
-        headers: {
-            "Content-type": "application/json",
-        },
-        body: JSON.stringify(DJId),
-    })
 }
 
 export const getDJByUserId = (userId) => {
@@ -47,7 +36,53 @@ export const getDJByUserId = (userId) => {
 };
 
 
-export const getDJById = (DJId) => {
-    return fetch(`http://localhost:8088/DJs/${DJId}?_expand=user`)
-        .then(res => res.json());
+export const getFullDJProfile = async (userId) => {
+    // 1. Fetch the DJ with all relevant expansions
+    const djRes = await fetch(`http://localhost:8088/DJs?userId=${userId}&_expand=user&_expand=experienceLevel&_expand=availabilityType`);
+    const djData = await djRes.json();
+    const dj = djData[0];
+
+    if (!dj) return null;
+
+    // // 2. Fetch all DjAvailableDays rows for this DJ and expand availableDay
+    // const daysRes = await fetch(`http://localhost:8088/DjAvailableDays?DjId=${dj.id}&_expand=availableDay`);
+    // const dayLinks = await daysRes.json();
+
+    // // 3. Map to an array of availableDay objects
+    // dj.availableDays = dayLinks.map(link => link.availableDay);
+
+    return dj;
 };
+
+
+
+export const updateDJProfile = (djObj) => {
+    return fetch(`http://localhost:8088/djs/${djObj.id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(djObj)
+    }).then(res => {
+        if (!res.ok) {
+            throw new Error("Failed to update DJ profile");
+        }
+        return res.json();
+    });
+};
+
+
+
+export const updateSelectedDays = () => {
+    return<></>
+}
+
+export const getExperienceLevels = () => {
+    return fetch(`http://localhost:8088/experienceLevels`).then((res) => res.json())
+}
+export const getAvailabilityTypes = () => {
+    return fetch(`http://localhost:8088/availabilityTypes`).then((res) => res.json())
+}
+export const getAvailableDays = () => {
+    return fetch(`http://localhost:8088/availableDays`).then((res) => res.json())
+}

@@ -8,7 +8,7 @@ import { AddOnList } from "../addOn/addOnList.jsx"
 import { VinylButton } from "../welcome/VinylButton.jsx"
 import { DJProfile } from "../djs/DJProfile.jsx"
 import { DJNav } from "../nav/DJNav.jsx"
-import { DJDetails } from "../djs/DjDetails.jsx"
+import { DJForm } from "../djs/DJForm.jsx"
 
 
 export const DJViews = ({ currentUser }) => {
@@ -41,12 +41,13 @@ export const DJViews = ({ currentUser }) => {
                     <Route index element={< AddOnList currentUser={currentUser} />} />
                 </Route>
 
-                <Route
-                    path="profile"
-                    element={<Navigate to={`/profile/${currentUser.id}`} replace />}/>
+                <Route path="profile" element={<Navigate to={`/profile/${currentUser.id}`} replace />} />
+
                 <Route path="profile/:DJId" element={<DJProfile currentUser={currentUser} />} />
-                    <Route path=":userId" element={< DJDetails currentUser={currentUser} />} />
-            
+
+                <Route path="edit-profile/:userId" element={<DJForm currentUser={currentUser} />} />
+
+
             </Route>
         </Routes >
     )

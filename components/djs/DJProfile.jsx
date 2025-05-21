@@ -1,42 +1,24 @@
 import { useEffect, useState } from "react";
-import { getDJByUserId } from "../services/djServices.jsx";
+import { getDJByUserId, getFullDJProfile } from "../services/djServices.jsx";
 import "./DJProfile.css"
 import { useNavigate, useParams } from "react-router-dom";
 
 export const DJProfile = ({ currentUser }) => {
     const [dj, setDj] = useState(null); // Store single DJ object or null
-    const [loading, setLoading] = useState(true); // Handle loading state
-    const [error, setError] = useState(null); // Handle errors
-    const { userId } = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
-        console.log("Current User ID:", currentUser?.id); // Debug: Log user ID
-        console.log("Current User Object:", currentUser); // Debug: Log full user object
-
-        if ({userId}) {
-            setLoading(true);
-            setError(null);
-            setDj(null); // Clear stale data
-            getDJByUserId(currentUser.id)
-                .then((djData) => {
-                    console.log("Fetched DJ Data:", djData); // Debug: Log API response
-                    setDj(djData); // Expect single object or null
-                    setLoading(false);
-                })
-                .catch((error) => {
-                    console.error("Error fetching DJ:", error);
-                    setError("Failed to load DJ profile.");
-                    setDj(null);
-                    setLoading(false);
-                });
-        } else {
-            console.log("No user logged in"); // Debug: Log when no user
-            setDj(null);
-            setLoading(false);
-            setError(null);
+        console.log("Current User:", currentUser); // Check if it's defined
+        if (currentUser?.id) {
+            getFullDJProfile(currentUser.id).then((djObj) => {
+                console.log("Fetched DJ:", djObj); // See what's returned
+                setDj(djObj);
+            }).catch(err => {
+                console.error("Error fetching DJ:", err);
+            });
         }
-    }, [userId]); // Re-run when currentUser.id changes
+    }, [currentUser]);
+
 
     // Function to format cost as USD
     const formatCurrency = (amount) => {
@@ -46,31 +28,8 @@ export const DJProfile = ({ currentUser }) => {
         }).format(amount || 0);
     };
 
-    // Function to format availability dates
-    const formatDates = (days) => {
-        if (!Array.isArray(days) || days.length === 0) {
-            return "No availability specified";
-        }
-        // Ensure proper capitalization and join with commas
-        return days.map((day) => day.charAt(0).toUpperCase() + day.slice(1).toLowerCase())
-            .join(", ");
-    };
-
-    if (loading) {
-        return <div>Loading DJ profile...</div>;
-    }
-
-    if (error) {
-        return <div>{error}</div>;
-    }
-
-    if (!currentUser) {
-        return <div>Please log in to view your DJ profile.</div>;
-    }
-
-    if (!dj) {
-        return <div>No DJ profile found for this user.</div>;
-    }
+    if (!dj) return <div>Loading profile...</div>;
+    // if (error) return <div>{error}</div>;
 
     return (
         <article>
@@ -79,8 +38,8 @@ export const DJProfile = ({ currentUser }) => {
                     <header className="dj-profile__header">DJ: {dj.user?.name || "Unknown DJ"}</header>
 
                     <div className="dj-profile__row">
-                        <div className="dj-profile__label">Price:</div>
-                        <div className="dj-profile__value">{formatCurrency(dj.cost) || "0"}</div>
+                        <div className="dj-profile__label">Rate:</div>
+                        <div className="dj-profile__value">{formatCurrency(dj.rate) || "0"}</div>
                     </div>
 
                     <div className="dj-profile__row">
@@ -89,19 +48,20 @@ export const DJProfile = ({ currentUser }) => {
                     </div>
 
                     <div className="dj-profile__row">
-                        <div className="dj-profile__label">Experience Level:</div>
-                        <div className="dj-profile__value">{dj.experienceLevel || "Not specified"}</div>
-                    </div>
-
-                    <div className="dj-profile__row">
                         <div className="dj-profile__label">Availability Type:</div>
-                        <div className="dj-profile__value">{dj.availabilityType || "Not specified"}</div>
+                        <div className="dj-profile__value">{dj.availabilityType?.label || "Not specified"}</div>
                     </div>
 
                     <div className="dj-profile__row">
+                        <div className="dj-profile__label">Experience Level:</div>
+                        <div className="dj-profile__value">{dj.experienceLevel?.level || "Not specified"}</div>
+                    </div>
+
+
+                    {/* <div className="dj-profile__row">
                         <div className="dj-profile__label">Available Days:</div>
                         <div className="dj-profile__value">{formatDates(dj.availableDays)}</div>
-                    </div>
+                    </div> */}
 
                     <div className="dj-profile__row">
                         <div className="dj-profile__label">Sample:</div>
@@ -118,9 +78,10 @@ export const DJProfile = ({ currentUser }) => {
                     <div className="dj-profile__row">
                         <div className="dj-profile__label"></div>
                         <div className="dj-profile__value">
-                            <button className="cyber-btn" onClick={() => navigate("/edit-profile/{dj.userId}")}>
+                            <button className="cyber-btn" onClick={() => navigate(`/edit-profile/${currentUser.id}`)}>
                                 Edit Profile
                             </button>
+
                         </div>
                     </div>
                 </div>

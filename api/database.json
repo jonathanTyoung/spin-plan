@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 101,
-      "name": "John Baker",
+      "name": "John BakerMcBakerson",
       "email": "dj1@musicflow.com",
       "isDj": true
     },
@@ -117,19 +117,18 @@
   ],
   "DJs": [
     {
-      "id": 1,
       "userId": 101,
-      "cost": 1000,
-      "bio": "Super hype Club DJ",
-      "experienceLevel": "",
-      "availabilityType": "Weekly",
-      "availableDays": ["Friday", "Saturday", "Sunday"],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
+      "bio": "Professional and high energy wedding DJ",
+      "experienceLevelId": 2,
+      "rate": 150,
+      "availabilityTypeId": 2,
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
+      "id": 1
     },
     {
       "id": 2,
       "userId": 102,
-      "cost": 1200,
+      "rate": 1200,
       "availabilityType": "Always",
       "availableDates": [],
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
@@ -137,7 +136,7 @@
     {
       "id": 3,
       "userId": 103,
-      "cost": 1500,
+      "rate": 1500,
       "availabilityType": "Weekly",
       "weeklySchedule": [
         "Friday",
@@ -148,7 +147,7 @@
     {
       "id": 4,
       "userId": 104,
-      "cost": 950,
+      "rate": 950,
       "availabilityType": "Weekly",
       "weeklySchedule": [
         "Friday",
@@ -159,7 +158,7 @@
     {
       "id": 5,
       "userId": 105,
-      "cost": 1300,
+      "rate": 1300,
       "availabilityType": "range",
       "availableRange": {
         "start": "2025-05-20",
@@ -174,7 +173,7 @@
     {
       "id": 6,
       "userId": 106,
-      "cost": 1100,
+      "rate": 1100,
       "availabilityType": "always",
       "availableDates": [],
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
@@ -182,7 +181,7 @@
     {
       "id": 7,
       "userId": 107,
-      "cost": 1400,
+      "rate": 1400,
       "availabilityType": "weekly",
       "weeklySchedule": [
         "Thursday",
@@ -193,7 +192,7 @@
     {
       "id": 8,
       "userId": 108,
-      "cost": 1000,
+      "rate": 1000,
       "availabilityType": "range",
       "availableRange": {
         "start": "2025-06-01",
@@ -207,7 +206,7 @@
     {
       "id": 9,
       "userId": 109,
-      "cost": 1250,
+      "rate": 1250,
       "availabilityType": "dates",
       "availableDates": [
         "2025-07-01",
@@ -219,7 +218,7 @@
     {
       "id": 10,
       "userId": 110,
-      "cost": 950,
+      "rate": 950,
       "availabilityType": "weekly",
       "weeklySchedule": [
         "Saturday"
@@ -227,91 +226,101 @@
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
     }
   ],
-
-"availabilityTypes": [
-  {
-    "id": 1,
-    "name": "Always"
-  },
-  {
-    "id": 2,
-    "name": "Weekly"
-  },
-  {
-    "id": 3,
-    "name": "Weekends Only"
-  },
-  {
-    "id": 4,
-    "name": "Currently Unavailable"
-  }
-],
-
-"experienceLevels": [
-  {
-    "id": 1,
-    "name": "0-2 years"
-  },
-  {
-    "id": 2,
-    "name": "3-5 years"
-  },
-  {
-    "id": 3,
-    "name": "5-7 years"
-  },
-  {
-    "id": 4,
-    "name": "7-10 years"
-  },
-  {
-    "id": 5,
-    "name": "10+ years"
-  }
-],
-
-"availableDays": [
-  {
-    "id": 1,
-    "name": "Monday"
-  },
-  {
-    "id": 2,
-    "name": "Tuesday"
-  },
-  {
-    "id": 3,
-    "name": "Wednesday"
-  },
-  {
-    "id": 4,
-    "name": "Thursday"
-  },
-  {
-    "id": 5,
-    "name": "Friday"
-  },
-  {
-    "id": 6,
-    "name": "Saturday"
-  },
-  {
-    "id": 7,
-    "name": "Sunday"
-  },
-  {
-    "id": 8,
-    "name": "Everyday"
-  },
-  {
-    "id": 9,
-    "name": "None"
-  }
-
-],
-
-
-
+  "availabilityTypes": [
+    {
+      "id": 1,
+      "label": "Always"
+    },
+    {
+      "id": 2,
+      "label": "Weekly"
+    },
+    {
+      "id": 3,
+      "label": "Weekends Only"
+    },
+    {
+      "id": 4,
+      "label": "Currently Unavailable"
+    }
+  ],
+  "experienceLevels": [
+    {
+      "id": 1,
+      "level": "0-2 years"
+    },
+    {
+      "id": 2,
+      "level": "3-5 years"
+    },
+    {
+      "id": 3,
+      "level": "5-7 years"
+    },
+    {
+      "id": 4,
+      "level": "7-10 years"
+    },
+    {
+      "id": 5,
+      "level": "10+ years"
+    }
+  ],
+  "availableDays": [
+    {
+      "id": 1,
+      "label": "Monday"
+    },
+    {
+      "id": 2,
+      "label": "Tuesday"
+    },
+    {
+      "id": 3,
+      "label": "Wednesday"
+    },
+    {
+      "id": 4,
+      "label": "Thursday"
+    },
+    {
+      "id": 5,
+      "label": "Friday"
+    },
+    {
+      "id": 6,
+      "label": "Saturday"
+    },
+    {
+      "id": 7,
+      "label": "Sunday"
+    },
+    {
+      "id": 8,
+      "label": "Everyday"
+    },
+    {
+      "id": 9,
+      "label": "None"
+    }
+  ],
+  "DjAvailableDays": [
+    {
+      "id": 1,
+      "DjId": 1,
+      "availableDayId": 5
+    },
+    {
+      "id": 2,
+      "DjId": 1,
+      "availableDayId": 6
+    },
+    {
+      "id": 3,
+      "DjId": 1,
+      "availableDayId": 7
+    }
+  ],
   "customers": [
     {
       "id": 1,
