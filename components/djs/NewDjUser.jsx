@@ -14,8 +14,8 @@ export const NewDjUser = () => {
     userId: "",
     rate: 0,
     bio: "",
-    experienceLevelId: "",
-    availabilityTypeId: "",
+    experienceLevelId: 0,
+    availabilityTypeId: 0,
     sample: "",
   })
   const { userId } = useParams()
@@ -55,7 +55,13 @@ export const NewDjUser = () => {
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target
-    setDjProfile((prev) => ({ ...prev, [name]: value }))
+
+    setDjProfile((prev) => ({
+      ...prev,
+      [name]: ["experienceLevelId", "availabilityTypeId"].includes(name)
+        ? parseInt(value)
+        : value,
+    }))
   }
 
   // Handle final Create Profile click

@@ -46,36 +46,35 @@ export const DjCard = ({ DJObj, currentUser }) => {
                         <header className="dj-card__header">Dj: {DJObj.user.name}</header>
 
                         <div className="dj-card__row">
-                            <div className="dj-card__label">Bio:</div>
+                            <div className="dj-card__label"></div>
                             <div className="dj-card__value">{DJObj?.bio}</div>
                         </div>
                         <div className="dj-card__row">
-                            <div className="dj-card__label">Experience Level:</div>
-                            <div className="dj-card__value">
-                                {
+                            <div className="dj-card__label">Experience Level: {
                                     experienceLevels.find(level => level.id === DJObj.experienceLevelId)?.level
                                     || "Unknown"
-                                }
-                            </div>
+                                }</div>
+                            <div className="dj-card__value">
+                                
+                            
                         </div>
 
                         <div className="dj-card__row">
-                            <div className="dj-card__label">Availability:</div>
-                            <div className="dj-card__value">
-                                {
+                            <div className="dj-card__label">Availability: {
                                     availabilityTypes.find(type => type.id === DJObj.availabilityTypeId)?.label
                                     || "Unknown"
-                                }
+                                }</div>
                             </div>
                         </div>
 
-                        <div className="dj-card__row">
+                        {/* <div className="dj-card__row">
                             <div className="dj-card__label">Days Available:</div>
                             <div className="dj-card__value">{DJObj.availableDays}</div>
-                        </div>
+                        </div> */}
+
                         <div className="dj-card__row">
-                            <div className="dj-card__label">Rate:</div>
-                            <div className="dj-card__value">{DJObj.rate}</div>
+                            <div className="dj-card__label">Hourly Rate: {DJObj.rate}</div>
+                            
                         </div>
                         <div className="DJ-label">
                             Sample:{" "}
@@ -89,7 +88,7 @@ export const DjCard = ({ DJObj, currentUser }) => {
                         </div>
                     </div>
                 </section>
-            ))};
+            ))}
         </article>
     )
 }

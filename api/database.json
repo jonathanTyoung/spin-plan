@@ -61,10 +61,10 @@
       "isDj": false
     },
     {
-      "id": 211,
-      "name": "Jonny Cortado",
       "email": "cortado@email.com",
-      "isDj": true
+      "name": "Jonny Cortado",
+      "isDj": true,
+      "id": 211
     }
   ],
   "DJs": [
@@ -80,10 +80,10 @@
     {
       "id": 2,
       "userId": 211,
-      "rate": "50",
+      "rate": "200",
       "bio": "Cafe House Music DJ",
-      "experienceLevelId": "2",
-      "availabilityTypeId": "1",
+      "experienceLevelId": 2,
+      "availabilityTypeId": 1,
       "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     }
   ],
@@ -482,19 +482,19 @@
     {
       "userId": 210,
       "description": "Office holiday party",
-      "DJId": "9",
+      "DJId": "1",
       "eventTypeId": "5",
       "date": "2025-12-22",
-      "totalCost": 1250,
+      "totalCost": 297,
       "id": 3
     },
     {
       "userId": 210,
       "description": "Daughter's birthday party",
-      "DJId": "7",
+      "DJId": "2",
       "eventTypeId": "2",
       "date": "2025-12-20",
-      "totalCost": 1400,
+      "totalCost": "50",
       "id": 6
     },
     {
