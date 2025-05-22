@@ -1,0 +1,13 @@
+.events {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center; /* optional */
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+.upcoming-events-header {
+    font-family: 'Exo 2', sans-serif;
+
+}

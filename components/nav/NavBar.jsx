@@ -1,70 +1,41 @@
+import { Link, useNavigate } from "react-router-dom"
+import "./NavBar.css"
 
+export const NavBar = () => {
+    const navigate = useNavigate()
 
-// Copied file from Honey Rae's. Please be sure there aren't naming errors.
-// Line 66 may or may not be needed (see commented out line)
+    return <ul className="navbar">
+        <li className="navbar-item">
+            <Link to="/">Home</Link>
+        </li>
+        <li className="navbar-item">
+            <Link to="/event-form">Create Event</Link>
+        </li>
+        <li className="navbar-item">
+            <Link to="/upcoming-events">Upcoming Events</Link>
+        </li>
+        <li className="navbar-item">
+            <Link to="/djs">DJs</Link>
+        </li>
+        {/* <li className="navbar-item">
+            <Link to="/profile">Profile</Link>
+        </li> */}
+        {localStorage.getItem("spin_plan_user") ? (
+            <li className="navbar-item navbar-logout">
+                <Link
+                    className="navbar-link"
+                    to="/login"
+                    onClick={() => {
+                        localStorage.removeItem("spin_plan_user")
+                        navigate("/", { replace: true })
+                    }}
+                >
+                    Logout
+                </Link>
+            </li>
+        ) : (
+            ""
+        )}
 
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
-import "./Login.css"
-import { getCustomerByEmail } from "../../services/customerService.jsx"  
-
-export const Login = () => {
-  const [email, set] = useState("isabella.white@gmail.com")
-  const navigate = useNavigate()
-
-  const handleLogin = (e) => {
-    e.preventDefault()
-
-    getCustomerByEmail(email).then((foundUsers) => {
-      if (foundUsers.length === 1) {
-        const employee = foundUsers[0]
-        localStorage.setItem(
-          "spin_plan_user",
-          JSON.stringify({
-            id: employee.id,
-            isAdmin: employee.isAdmin,
-          })
-        )
-
-        navigate("/")
-      } else {
-        window.alert("Invalid login")
-      }
-    })
-  }
-
-  return (
-    <main className="container-login">
-      <section>
-        <form className="form-login" onSubmit={handleLogin}>
-          <h1>Shepherd's Pie</h1>
-          <h2>Please sign in</h2>
-          <fieldset>
-            <div className="form-group">
-              <input
-                type="email"
-                value={email}
-                onChange={(evt) => set(evt.target.value)}
-                className="form-control"
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
-          <fieldset>
-            <div className="form-group">
-              <button className="login-btn btn-info" type="submit">
-                Sign in
-              </button>
-            </div>
-          </fieldset>
-        </form>
-      </section>
-      <section>
-        {/* <Link to="/register">Not a member yet?</Link> */}
-      </section>
-    </main>
-  )
+    </ul>
 }

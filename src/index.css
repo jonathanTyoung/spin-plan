@@ -1,0 +1,58 @@
+/* ================================
+   Root Theme Variables
+   ================================ */
+:root {
+  --color-light: #FBD0A6;
+  --color-orange: #F37022;
+  --color-red: #B11016;
+  --color-teal: #2ABA9E;
+  --color-navy: #007096;
+
+  --primary-color: var(--color-orange);
+  --secondary-color: var(--color-navy);
+  --bg-color: #0D1B2A;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ================================
+   Global Base Styles
+   ================================ */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ================================
+   Headings
+   ================================ */
+/* h1, h2, h3 {
+  color: #B11016;
+  margin-bottom: 0.5em;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* ================================
+   Button Styling
+   ================================ */
+button {
+  background-color: var(--primary-color);
+  color: B11016;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-red);
+}
