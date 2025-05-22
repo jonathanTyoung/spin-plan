@@ -37,12 +37,12 @@ export const CustomerNav = () => {
           <span>DJs</span>
         </Link>
       </li>
-      <li className="cyber-btn">
+      {/* <li className="cyber-btn">
         <Link to="/add-on-list">
           <span className="cyber-glitch">Additional Packages</span>
           <span>Additional Packages</span>
         </Link>
-      </li>
+      </li> */}
       {localStorage.getItem("spin_plan_user") && (
         <li className="cyber-btn">
           <Link

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAllDJsByUserId, getAvailabilityTypes, getExperienceLevels } from "../services/djServices.jsx"
+import "./djCard.css"
 
 export const DjCard = ({ DJObj, currentUser }) => {
     const [allDJs, setAllDJs] = useState([])
@@ -39,56 +40,56 @@ export const DjCard = ({ DJObj, currentUser }) => {
     }
 
     return (
-        <article>
-            {allDJs.map((DJObj) => (
-                <section key={DJObj.id} className="DJ-section">
-                    <div className="dj-card">
-                        <header className="dj-card__header">Dj: {DJObj.user.name}</header>
+  <article className="dj-grid-container">
+    {allDJs.map((DJObj) => (
+      <section key={DJObj.id} className="dj-card-section">
+        <div className="dj-card">
+          <header className="dj-card__header">🎧 DJ: {DJObj.user.name}</header>
 
-                        <div className="dj-card__row">
-                            <div className="dj-card__label"></div>
-                            <div className="dj-card__value">{DJObj?.bio}</div>
-                        </div>
-                        <div className="dj-card__row">
-                            <div className="dj-card__label">Experience Level: {
-                                    experienceLevels.find(level => level.id === DJObj.experienceLevelId)?.level
-                                    || "Unknown"
-                                }</div>
-                            <div className="dj-card__value">
-                                
-                            
-                        </div>
+          <div className="dj-card__row">
+            <div className="dj-card__label">Bio:</div>
+            <div className="dj-card__value">{DJObj?.bio}</div>
+          </div>
 
-                        <div className="dj-card__row">
-                            <div className="dj-card__label">Availability: {
-                                    availabilityTypes.find(type => type.id === DJObj.availabilityTypeId)?.label
-                                    || "Unknown"
-                                }</div>
-                            </div>
-                        </div>
+          <div className="dj-card__row">
+            <div className="dj-card__label">Experience Level:</div>
+            <div className="dj-card__value">
+              {experienceLevels.find((level) => level.id === DJObj.experienceLevelId)?.level || "Unknown"}
+            </div>
+          </div>
 
-                        {/* <div className="dj-card__row">
-                            <div className="dj-card__label">Days Available:</div>
-                            <div className="dj-card__value">{DJObj.availableDays}</div>
-                        </div> */}
+          <div className="dj-card__row">
+            <div className="dj-card__label">Availability:</div>
+            <div className="dj-card__value">
+              {availabilityTypes.find((type) => type.id === DJObj.availabilityTypeId)?.label || "Unknown"}
+            </div>
+          </div>
 
-                        <div className="dj-card__row">
-                            <div className="dj-card__label">Hourly Rate: {DJObj.rate}</div>
-                            
-                        </div>
-                        <div className="DJ-label">
-                            Sample:{" "}
-                            {DJObj.sample ? (
-                                <a href={DJObj.sample} target="_blank" rel="noopener noreferrer">
-                                    Listen
-                                </a>
-                            ) : (
-                                "No sample available"
-                            )}
-                        </div>
-                    </div>
-                </section>
-            ))}
-        </article>
-    )
+          <div className="dj-card__row">
+            <div className="dj-card__label">Rate:</div>
+            <div className="dj-card__value">{formatCurrency(DJObj.rate)}/hour</div>
+          </div>
+
+          <div className="dj-card__row dj-sample-row">
+            {DJObj.sample ? (
+              <a
+                className="btn"
+                href={DJObj.sample}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="btn-flip-side btn-flip-side--red">
+                  <span>Click Here</span>
+                  <span>Listen to Sample</span>
+                </div>
+              </a>
+            ) : (
+              <div className="no-sample">No sample available</div>
+            )}
+          </div>
+        </div>
+      </section>
+    ))}
+  </article>
+);
 }

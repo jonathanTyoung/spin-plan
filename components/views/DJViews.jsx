@@ -9,7 +9,8 @@ import { VinylButton } from "../welcome/VinylButton.jsx"
 import { DJProfile } from "../djs/DJProfile.jsx"
 import { DJNav } from "../nav/DJNav.jsx"
 import { DJForm } from "../djs/DJForm.jsx"
-import { NewDjUser} from "../djs/NewDjUser.jsx" // adjust path as needed
+import { NewDjUser } from "../djs/NewDjUser.jsx" // adjust path as needed
+import { UpcomingDjEvents } from "../events/UpcomingDjEvents.jsx"
 
 export const DJViews = ({ currentUser }) => {
   const navigate = useNavigate()
@@ -28,18 +29,17 @@ export const DJViews = ({ currentUser }) => {
         <Route index element={<VinylButton />} />
         <Route path="event-form" element={<EventForm currentUser={currentUser} />} />
 
-        <Route path="upcoming-jobs">
-          <Route index element={<UpcomingEvents currentUser={currentUser} />} />
-          <Route path=":eventId" element={<EventDetails currentUser={currentUser} />} />
+        <Route path="upcoming-events">
+          <Route index element={<UpcomingDjEvents currentUser={currentUser} />} />
         </Route>
 
         <Route path="dj-list">
           <Route index element={<DJList currentUser={currentUser} />} />
         </Route>
 
-        <Route path="add-on-list">
+        {/* <Route path="add-on-list">
           <Route index element={<AddOnList currentUser={currentUser} />} />
-        </Route>
+        </Route> */}
 
         <Route path="profile" element={<Navigate to={`/profile/${currentUser.id}`} replace />} />
         <Route path="profile/:DJId" element={<DJProfile currentUser={currentUser} />} />

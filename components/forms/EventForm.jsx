@@ -7,8 +7,9 @@ import { createEvent, getEventTypes, getAllDJsById } from "../services/EventServ
 export const EventForm = ({ currentUser }) => {
     const [event, setEvent] = useState({
         description: "",
-        DJId: 0,
-        eventTypeId: 0,
+        DJId: "",
+        hours: 0,
+        eventTypeId: "",
         date: "",
         totalCost: 0
     })
@@ -44,13 +45,14 @@ export const EventForm = ({ currentUser }) => {
             const newEvent = {
                 userId: currentUser.id,
                 description: event.description,
-                DJId: event.DJId,
-                eventTypeId: event.eventTypeId,
+                DJId: parseInt(event.DJId),
+                hours: parseInt(event.hours),
+                eventTypeId: parseInt(event.eventTypeId),
                 date: event.date,
-                totalCost: event.totalCost
+                totalCost: parseFloat(event.totalCost)
             }
 
-        console.log("Event being sent to the server:", newEvent) // Debugging
+            console.log("Event being sent to the server:", newEvent) // Debugging
 
 
             createEvent(newEvent).then(() => {
@@ -72,14 +74,17 @@ export const EventForm = ({ currentUser }) => {
                         value={event.description}
                         className="form-control"
                         placeholder="Brief description of event"
-                        onChange={(event) => {
-                            const eventCopy = { ...event }
-                            eventCopy.description = event.target.value
-                            setEvent(eventCopy)
-                        }}
+                        onChange={(e) =>
+                            setEvent((prev) => ({
+                                ...prev,
+                                description: e.target.value,
+                            }))
+                        }
+
                     />
                 </div>
             </fieldset>
+
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="DJId">Choose DJ</label>
@@ -109,6 +114,27 @@ export const EventForm = ({ currentUser }) => {
                     </select>
                 </div>
             </fieldset>
+
+            <fieldset>
+                <div className="form-group">
+                    <label>Event Hours</label>
+                    <input
+                        type="number"
+                        value={event.hours}
+                        className="form-control"
+                        placeholder="# of hours"
+                        onChange={(e) =>
+                            setEvent((prev) => ({
+                                ...prev,
+                                hours: e.target.value,
+                            }))
+                        }
+
+                    />
+                </div>
+            </fieldset>
+
+
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="DJId">Choose Event Type</label>
@@ -135,6 +161,7 @@ export const EventForm = ({ currentUser }) => {
                     </select>
                 </div>
             </fieldset>
+
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="date">Event Date</label>
@@ -154,14 +181,16 @@ export const EventForm = ({ currentUser }) => {
                     />
                 </div>
             </fieldset>
+
             <fieldset>
                 <div className="form-group">
                     <label>Total Cost</label>
                     <div className="form-group">
-                        ${event.totalCost || 0}
+                        ${(event.totalCost * event.hours) || 0}
                     </div>
                 </div>
             </fieldset>
+
             <fieldset>
                 <div className="form-group">
                     <button

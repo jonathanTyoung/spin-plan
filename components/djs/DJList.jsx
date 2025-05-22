@@ -8,9 +8,10 @@ export const DJList = ({ DJObj, currentUser }) => {
 
 
     return (
-        <article>
-            <h2>DJs</h2>
+        <article className="djs-wrapper">
+            <h2>List of Active DJs in Town</h2>
             < DjCard
+                classname="dj-section"
                 currentUser={currentUser}
                 DJObj={DJObj} />
         </article>

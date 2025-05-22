@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 101,
-      "name": "John BakerMcBakersonsonson",
+      "name": "John BakerMcBakersonson",
       "email": "dj1@musicflow.com",
       "isDj": true
     },
@@ -65,6 +65,18 @@
       "name": "Jonny Cortado",
       "isDj": true,
       "id": 211
+    },
+    {
+      "email": "djjane@email.com",
+      "name": "Jane Bittell",
+      "isDj": true,
+      "id": 212
+    },
+    {
+      "id": 213,
+      "name": "Ludwig Von BeatMeister",
+      "email": "beatz@email.com",
+      "isDj": true
     }
   ],
   "DJs": [
@@ -72,7 +84,7 @@
       "userId": 101,
       "bio": "Professional and high energy wedding DJ",
       "experienceLevelId": 2,
-      "rate": 297,
+      "rate": 300,
       "availabilityTypeId": 2,
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "id": 1
@@ -85,6 +97,24 @@
       "experienceLevelId": 2,
       "availabilityTypeId": 1,
       "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    },
+    {
+      "id": 3,
+      "userId": 212,
+      "rate": "500",
+      "bio": "beat master",
+      "experienceLevelId": 4,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    },
+    {
+      "id": 4,
+      "userId": 213,
+      "rate": "400",
+      "bio": "Orchestral DubStep DJ",
+      "experienceLevelId": 5,
+      "availabilityTypeId": 1,
+      "sample": "https://www.youtube.com/watch?v=IkXWlNuSwCo"
     }
   ],
   "availabilityTypes": [
@@ -94,7 +124,7 @@
     },
     {
       "id": 2,
-      "label": "Weekly"
+      "label": "Certain Days"
     },
     {
       "id": 3,
@@ -469,20 +499,18 @@
     {
       "userId": 210,
       "description": "My GramGram's 1000th birthday. ",
-      "DJId": "1",
-      "eventTypeId": "6",
+      "DJId": 4,
+      "hours": 4,
+      "eventTypeId": 2,
       "date": "2025-12-20",
       "id": 1,
-      "eventType": {
-        "id": 2,
-        "name": "Birthday"
-      },
-      "totalCost": 150
+      "totalCost": 400
     },
     {
       "userId": 210,
       "description": "Office holiday party",
       "DJId": "1",
+      "hours": 4,
       "eventTypeId": "5",
       "date": "2025-12-22",
       "totalCost": 297,
@@ -492,6 +520,7 @@
       "userId": 210,
       "description": "Daughter's birthday party",
       "DJId": "2",
+      "hours": 4,
       "eventTypeId": "2",
       "date": "2025-12-20",
       "totalCost": "50",
@@ -501,6 +530,7 @@
       "userId": 209,
       "description": "Husband's birthday",
       "DJId": "9",
+      "hours": 4,
       "eventTypeId": "2",
       "date": "2025-12-19",
       "totalCost": 1250,
@@ -510,10 +540,61 @@
       "userId": 210,
       "description": "Great great great grandpa's funeral",
       "DJId": "1",
+      "hours": 4,
       "eventTypeId": "6",
       "date": "2125-12-20",
       "totalCost": 150,
       "id": 8
+    },
+    {
+      "userId": 210,
+      "description": "frat house summer party",
+      "DJId": "4",
+      "hours": 6,
+      "eventTypeId": 6,
+      "date": "2025-07-14",
+      "totalCost": "400",
+      "id": 9
+    },
+    {
+      "userId": 210,
+      "description": "summer pool party",
+      "DJId": 4,
+      "hours": 2,
+      "eventTypeId": 4,
+      "date": "2025-06-25",
+      "totalCost": 400,
+      "id": 10
+    },
+    {
+      "userId": 210,
+      "description": "End of summer break party",
+      "DJId": 2,
+      "hours": 4,
+      "eventTypeId": 6,
+      "date": "2025-08-25",
+      "totalCost": 200,
+      "id": 11
+    },
+    {
+      "userId": 206,
+      "description": "My brother's Bar Mitzvah",
+      "DJId": 4,
+      "hours": 4,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 400,
+      "id": 12
+    },
+    {
+      "userId": 201,
+      "description": "Wife's going away party",
+      "DJId": 1,
+      "hours": 4,
+      "eventTypeId": 6,
+      "date": "2025-08-31",
+      "totalCost": 300,
+      "id": 13
     }
   ]
 }

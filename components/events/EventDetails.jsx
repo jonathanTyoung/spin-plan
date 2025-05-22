@@ -36,13 +36,25 @@ export const EventDetails = ({ currentUser }) => {
         const { id, value } = evt.target;
         const selectedDJ = DJs.find(dj => dj.id === parseInt(value));
         const cost = selectedDJ ? selectedDJ.rate : 0;
-        setEvent(prev => ({...prev, [id]: value, totalCost: cost
+        setEvent(prev => ({
+            ...prev, [id]: value, totalCost: cost
         }));
     };
 
     const handleUpdate = (evt) => {
         evt.preventDefault();
-        updateEvent(event).then(() => alert("Event updated!"));
+
+        // Ensure numeric fields are parsed before sending
+        const updatedEvent = {
+            ...event,
+            hours: parseInt(event.hours),
+            DJId: parseInt(event.DJId),
+            eventTypeId: parseInt(event.eventTypeId),
+            totalCost: parseFloat(event.totalCost)
+        };
+
+
+        updateEvent(updatedEvent).then(() => alert("Event updated!"));
     };
 
     // Cancel the entire order
@@ -97,6 +109,19 @@ export const EventDetails = ({ currentUser }) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
+                    <label>Event Hours</label>
+                    <input
+                        type="number"
+                        id="hours"
+                        value={event.hours || ""}
+                        className="form-control"
+                        placeholder="# of hours"
+                        onChange={handleChange}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
                     <label className="label-color" htmlFor="eventTypeId">Choose Event Type</label>
                     <select
                         id="eventTypeId"
@@ -131,7 +156,7 @@ export const EventDetails = ({ currentUser }) => {
                 <div className="form-group">
                     <label>Total Cost</label>
                     <div className="form-group">
-                        ${event.totalCost || 0}
+                        ${(event.totalCost * event.hours) || 0}
                     </div>
                 </div>
             </fieldset>
@@ -140,7 +165,7 @@ export const EventDetails = ({ currentUser }) => {
                     <button
                         type="submit"
                         className="cyber-btn"
-                        
+
                     >
                         Update Event
                     </button>

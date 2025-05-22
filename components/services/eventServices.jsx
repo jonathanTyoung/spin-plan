@@ -62,6 +62,12 @@ export const getAllEventsWithDJNameAndEventType = async () => {
     });
 };
 
+export const getFullEventProfile = (DJId) => {
+    return fetch(`http://localhost:8088/events?DJId=${DJId}&_expand=user&_expand=eventType&_expand=DJ`)
+        .then(res => res.json());
+};
+
+
 export const getEventById = (id) => {
     return fetch(`http://localhost:8088/events/${id}`)
         .then(res => res.json());
@@ -75,3 +81,10 @@ export const cancelEvent = (eventId) => {
         return true;
     });
 };
+
+
+export const getAllEventsAndUsersAndEventTypes = (eventId) => {
+    return fetch(`http://localhost:8088/events?eventId=${eventId}&_expand=user&_expand=eventType`).then((res) =>
+        res.json())
+}
+

@@ -27,9 +27,9 @@ export const DJNav = ({ currentUser }) => {
           </Link>
         </div> */}
         <div className="cyber-btn">
-          <Link to="/upcoming-jobs">
+          <Link to="/upcoming-events">
             <span className="cyber-glitch">Upcoming Events</span>
-            <span>Upcoming Jobs</span>
+            <span>Your Upcoming Events</span>
           </Link>
         </div>
         <div className="cyber-btn">

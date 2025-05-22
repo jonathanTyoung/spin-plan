@@ -54,13 +54,18 @@ export const EventCard = ({ eventObj, currentUser }) => {
           </div>
 
           <div className="event-card__row">
+            <div className="event-card__label">Hours Booked</div>
+            <div className="event-card__value">{eventObj.hours} Hours</div>
+          </div>
+
+          <div className="event-card__row">
             <div className="event-card__label">Date of Event:</div>
             <div className="event-card__value">{eventObj.date}</div>
           </div>
 
           <div className="event-card__row">
             <div className="event-card__label">Total Cost:</div>
-            <div className="event-card__value">{formatCurrency(eventObj.totalCost)}</div>
+            <div className="event-card__value">{formatCurrency(eventObj.totalCost * eventObj.hours)}</div>
           </div>
         </Link>
       </ol>
