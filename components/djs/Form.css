@@ -12,6 +12,10 @@ form {
   color: #ff003c; /* Change this to any color you want */
 }
 
+.profile {
+  background-color: #2ABA9E;
+}
+
 .form-container {
   background-color: #2ABA9E;
 }

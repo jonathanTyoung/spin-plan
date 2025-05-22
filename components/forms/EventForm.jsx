@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import "./Form.css"
+import "./EventForm.css"
 import { useNavigate } from "react-router-dom"
 import { createEvent, getEventTypes, getAllDJsById } from "../services/EventServices.jsx"
 
@@ -89,7 +89,7 @@ export const EventForm = ({ currentUser }) => {
                         onChange={(evt) => {
                             const { id, value } = evt.target
                             const selectedDJ = DJs.find((dj) => dj.id === parseInt(value)) // Find the selected DJ
-                            const cost = selectedDJ ? selectedDJ.cost : 0 // Get the cost of the selected DJ
+                            const cost = selectedDJ ? selectedDJ.rate : 0 // Get the cost of the selected DJ
 
                             setEvent((prevEvent) => ({
                                 ...prevEvent,
@@ -103,7 +103,7 @@ export const EventForm = ({ currentUser }) => {
                         <option value="">Select Your DJ...</option>
                         {DJs.map((dj) => (
                             <option key={dj.id} value={dj.id}>
-                                {dj.user.name} - ${dj.cost}
+                                {dj.user.name} - ${dj.rate}
                             </option>
                         ))}
                     </select>

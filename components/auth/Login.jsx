@@ -18,7 +18,7 @@ export const Login = () => {
                     "spin_plan_user",
                     JSON.stringify({
                         id: user.id,
-                        isDJ: user.isDj,
+                        isDj: user.isDj,
                     })
                 )
                 if (user.isDj) {

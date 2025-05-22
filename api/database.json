@@ -2,62 +2,8 @@
   "users": [
     {
       "id": 101,
-      "name": "John BakerMcBakerson",
+      "name": "John BakerMcBakersonsonson",
       "email": "dj1@musicflow.com",
-      "isDj": true
-    },
-    {
-      "id": 102,
-      "name": "Jane Bittell",
-      "email": "dj2@rhythmsound.com",
-      "isDj": true
-    },
-    {
-      "id": 103,
-      "name": "Alice Johnson",
-      "email": "dj3@partybeats.com",
-      "isDj": true
-    },
-    {
-      "id": 104,
-      "name": "Robert Williams",
-      "email": "dj4@vibeset.com",
-      "isDj": true
-    },
-    {
-      "id": 105,
-      "name": "Maria Garcia",
-      "email": "dj5@thebeat.com",
-      "isDj": true
-    },
-    {
-      "id": 106,
-      "name": "David Lee",
-      "email": "dj6@tunesonic.com",
-      "isDj": true
-    },
-    {
-      "id": 107,
-      "name": "Olivia Martinez",
-      "email": "dj7@soundwave.com",
-      "isDj": true
-    },
-    {
-      "id": 108,
-      "name": "Ethan Clark",
-      "email": "dj8@mixmaster.com",
-      "isDj": true
-    },
-    {
-      "id": 109,
-      "name": "Sophia Harris",
-      "email": "dj9@spinsounds.com",
-      "isDj": true
-    },
-    {
-      "id": 110,
-      "name": "Michael Brown",
-      "email": "dj10@bassdrop.com",
       "isDj": true
     },
     {
@@ -113,6 +59,12 @@
       "name": "Ryan Flynn",
       "email": "flynn@email.com",
       "isDj": false
+    },
+    {
+      "id": 211,
+      "name": "Jonny Cortado",
+      "email": "cortado@email.com",
+      "isDj": true
     }
   ],
   "DJs": [
@@ -120,110 +72,19 @@
       "userId": 101,
       "bio": "Professional and high energy wedding DJ",
       "experienceLevelId": 2,
-      "rate": 150,
+      "rate": 297,
       "availabilityTypeId": 2,
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "id": 1
     },
     {
       "id": 2,
-      "userId": 102,
-      "rate": 1200,
-      "availabilityType": "Always",
-      "availableDates": [],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 3,
-      "userId": 103,
-      "rate": 1500,
-      "availabilityType": "Weekly",
-      "weeklySchedule": [
-        "Friday",
-        "Saturday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 4,
-      "userId": 104,
-      "rate": 950,
-      "availabilityType": "Weekly",
-      "weeklySchedule": [
-        "Friday",
-        "Saturday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 5,
-      "userId": 105,
-      "rate": 1300,
-      "availabilityType": "range",
-      "availableRange": {
-        "start": "2025-05-20",
-        "end": "2025-07-15"
-      },
-      "weeklySchedule": [
-        "Thursday",
-        "Sunday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 6,
-      "userId": 106,
-      "rate": 1100,
-      "availabilityType": "always",
-      "availableDates": [],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 7,
-      "userId": 107,
-      "rate": 1400,
-      "availabilityType": "weekly",
-      "weeklySchedule": [
-        "Thursday",
-        "Sunday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 8,
-      "userId": 108,
-      "rate": 1000,
-      "availabilityType": "range",
-      "availableRange": {
-        "start": "2025-06-01",
-        "end": "2025-06-30"
-      },
-      "weeklySchedule": [
-        "Saturday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 9,
-      "userId": 109,
-      "rate": 1250,
-      "availabilityType": "dates",
-      "availableDates": [
-        "2025-07-01",
-        "2025-07-04",
-        "2025-07-07"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
-    },
-    {
-      "id": 10,
-      "userId": 110,
-      "rate": 950,
-      "availabilityType": "weekly",
-      "weeklySchedule": [
-        "Saturday"
-      ],
-      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI"
+      "userId": 211,
+      "rate": "50",
+      "bio": "Cafe House Music DJ",
+      "experienceLevelId": "2",
+      "availabilityTypeId": "1",
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     }
   ],
   "availabilityTypes": [
@@ -608,15 +469,15 @@
     {
       "userId": 210,
       "description": "My GramGram's 1000th birthday. ",
-      "DJId": "3",
+      "DJId": "1",
       "eventTypeId": "6",
       "date": "2025-12-20",
-      "totalCost": 1500,
       "id": 1,
       "eventType": {
         "id": 2,
         "name": "Birthday"
-      }
+      },
+      "totalCost": 150
     },
     {
       "userId": 210,
@@ -644,6 +505,15 @@
       "date": "2025-12-19",
       "totalCost": 1250,
       "id": 7
+    },
+    {
+      "userId": 210,
+      "description": "Great great great grandpa's funeral",
+      "DJId": "1",
+      "eventTypeId": "6",
+      "date": "2125-12-20",
+      "totalCost": 150,
+      "id": 8
     }
   ]
 }

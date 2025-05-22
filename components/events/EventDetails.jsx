@@ -35,7 +35,7 @@ export const EventDetails = ({ currentUser }) => {
     const handleDJChange = (evt) => {
         const { id, value } = evt.target;
         const selectedDJ = DJs.find(dj => dj.id === parseInt(value));
-        const cost = selectedDJ ? selectedDJ.cost : 0;
+        const cost = selectedDJ ? selectedDJ.rate : 0;
         setEvent(prev => ({...prev, [id]: value, totalCost: cost
         }));
     };
@@ -89,7 +89,7 @@ export const EventDetails = ({ currentUser }) => {
                         <option value="">Select Your DJ...</option>
                         {DJs.map((dj) => (
                             <option key={dj.id} value={dj.id}>
-                                {dj.user.name} - ${dj.cost}
+                                {dj.user.name} - ${dj.rate}
                             </option>
                         ))}
                     </select>

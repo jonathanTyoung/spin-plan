@@ -4,9 +4,8 @@
     border-radius: 1rem;
     padding: 1rem;
     margin: 1rem;
-    color: #ff003c;
     font-family: 'Exo 2', sans-serif;
-    color: #ff003c;
+    color: black;
 }
 
 .event-card__header {
@@ -14,6 +13,7 @@
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
+    color: black;
     font-family: 'Exo 2', sans-serif;
     background-color: #2ABA9E;
 }
@@ -38,4 +38,9 @@
     font-family: 'Exo 2', sans-serif;
     background-color: #2ABA9E;
 
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }

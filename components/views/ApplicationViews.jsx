@@ -13,9 +13,11 @@ export const ApplicationViews = () => {
   }, [])
 
 
-return ( currentUser.isDJ ? (
+return ( currentUser.isDj ? (
+  // console.log("d", currentUser)
   <DJViews currentUser={currentUser} /> 
 ) : ( 
+  // console.log("nonDj", currentUser)
   <CustomerViews currentUser={currentUser} />
 ))
 }

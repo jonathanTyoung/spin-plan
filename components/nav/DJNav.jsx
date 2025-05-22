@@ -14,36 +14,36 @@ export const DJNav = ({ currentUser }) => {
       </button>
 
       <section className={`nav-list ${open ? "open" : ""}`}>
-        <div className="cyber-btn">
+        {/* <div className="cyber-btn">
           <Link to="/">
             <span className="cyber-glitch">Home</span>
             <span>Home</span>
           </Link>
-        </div>
-        <div className="cyber-btn">
+        </div> */}
+        {/* <div className="cyber-btn">
           <Link to="/event-form">
             <span className="cyber-glitch">Create Event</span>
             <span>Create Event</span>
           </Link>
-        </div>
+        </div> */}
         <div className="cyber-btn">
-          <Link to="/upcoming-events">
+          <Link to="/upcoming-jobs">
             <span className="cyber-glitch">Upcoming Events</span>
-            <span>Upcoming Events</span>
+            <span>Upcoming Jobs</span>
           </Link>
         </div>
         <div className="cyber-btn">
-          <Link to="/DJs">
+          <Link to="/dj-list">
             <span className="cyber-glitch">DJs</span>
             <span>DJs</span>
           </Link>
         </div>
-        <div className="cyber-btn">
+        {/* <div className="cyber-btn">
           <Link to="/add-on-list">
             <span className="cyber-glitch">Additional Packages</span>
             <span>Additional Packages</span>
           </Link>
-        </div>
+        </div> */}
         <div className="cyber-btn">
           <Link to={`/profile`}>
             <span className="cyber-glitch">Profile</span>

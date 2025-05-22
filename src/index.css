@@ -24,13 +24,20 @@ body {
   color: var(--secondary-color);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 /* ================================
    Headings
    ================================ */
-h1, h2, h3 {
+/* h1, h2, h3 {
   color: #B11016;
   margin-bottom: 0.5em;
-}
+  align-items: center;
+  justify-content: center;
+} */
 
 /* ================================
    Button Styling

@@ -16,9 +16,21 @@ export const DJForm = ({ currentUser }) => {
     const [successMessage, setSuccessMessage] = useState("")
     const navigate = useNavigate()
 
+    console.log("currentUser ", currentUser)
+
+    useEffect(() => {
+        if (!currentUser) {
+            console.log("user doesn't exist")
+        } else {
+            console.log("currentUser ", currentUser)
+        }
+    }, [])
+
+
     // Load current user's DJ profile on mount or when currentUser changes
     useEffect(() => {
         if (currentUser?.id) {
+            console.log("currentUser ", currentUser)
             getFullDJProfile(currentUser.id)
                 .then((djObj) => {
                     setDj(djObj)  // djObj is a single DJ object including user info
@@ -69,18 +81,16 @@ export const DJForm = ({ currentUser }) => {
         };
 
         const editedDj = {
-            id: dj.id,
-            userId: dj.userId,
-            bio: dj.bio,
-            rate: dj.rate,
-            experienceLevelId: dj.experienceLevelId,
-            availabilityTypeId: dj.availabilityTypeId,
-            sample: dj.sample
+            bio: dj?.bio,
+            rate: dj?.rate,
+            experienceLevelId: dj?.experienceLevelId,
+            availabilityTypeId: dj?.availabilityTypeId,
+            sample: dj?.sample
         };
 
         Promise.all([
             updateUserProfile(editedUser),
-            updateDJProfile(editedDj)
+            updateDJProfile(dj.id, editedDj)
         ])
             .then(() => {
                 setSuccessMessage("✅ Profile saved successfully!");

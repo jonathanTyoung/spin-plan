@@ -2,15 +2,27 @@ export const getAllDJsByUserId = () => {
     return fetch(`http://localhost:8088/DJs?_expand=user`).then((res) => res.json())
 }
 
-export const createDJ = (djData) => {
-    return fetch("http://localhost:8088/DJs", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(djData),
-    }).then((res) => res.json())
+export const createDJ = async (djData) => {
+  try {
+    const response = await fetch("http://localhost:8088/DJs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(djData),
+    })
+
+    if (!response.ok) {
+      throw new Error(`Failed to create DJ: ${response.statusText}`)
+    }
+
+    return await response.json()
+  } catch (error) {
+    console.error("Error creating DJ:", error)
+    throw error // Let the calling component handle the error
+  }
 }
+
 
 export const getDJByUserId = (userId) => {
     return fetch(`http://localhost:8088/DJs?userId=${userId}&_expand=user`, {
@@ -56,13 +68,13 @@ export const getFullDJProfile = async (userId) => {
 
 
 
-export const updateDJProfile = (djObj) => {
-    return fetch(`http://localhost:8088/djs/${djObj.id}`, {
+export const updateDJProfile = (id, editedDj) => {
+    return fetch(`http://localhost:8088/djs/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(djObj)
+        body: JSON.stringify(editedDj)
     }).then(res => {
         if (!res.ok) {
             throw new Error("Failed to update DJ profile");
@@ -70,6 +82,7 @@ export const updateDJProfile = (djObj) => {
         return res.json();
     });
 };
+
 
 
 
