@@ -12,9 +12,8 @@ export const Welcome = () => {
                 <span>Spin Plan</span>
             </h1>
             <div>Your one-stop-shop to find the perfect DJ for your event</div>
-            <div
-                className="btn-primary">
-                <button onClick={() => navigate("/event-form")}>
+            <div>
+                <button className="cyberpunk" onClick={() => navigate("/event-form")}>
                     Start Creating Your Event
                 </button>
             </div>

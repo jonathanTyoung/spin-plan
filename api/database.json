@@ -2,62 +2,8 @@
   "users": [
     {
       "id": 101,
-      "name": "John Baker",
+      "name": "John BakerMcBakersonson",
       "email": "dj1@musicflow.com",
-      "isDj": true
-    },
-    {
-      "id": 102,
-      "name": "Jane Bittell",
-      "email": "dj2@rhythmsound.com",
-      "isDj": true
-    },
-    {
-      "id": 103,
-      "name": "Alice Johnson",
-      "email": "dj3@partybeats.com",
-      "isDj": true
-    },
-    {
-      "id": 104,
-      "name": "Robert Williams",
-      "email": "dj4@vibeset.com",
-      "isDj": true
-    },
-    {
-      "id": 105,
-      "name": "Maria Garcia",
-      "email": "dj5@thebeat.com",
-      "isDj": true
-    },
-    {
-      "id": 106,
-      "name": "David Lee",
-      "email": "dj6@tunesonic.com",
-      "isDj": true
-    },
-    {
-      "id": 107,
-      "name": "Olivia Martinez",
-      "email": "dj7@soundwave.com",
-      "isDj": true
-    },
-    {
-      "id": 108,
-      "name": "Ethan Clark",
-      "email": "dj8@mixmaster.com",
-      "isDj": true
-    },
-    {
-      "id": 109,
-      "name": "Sophia Harris",
-      "email": "dj9@spinsounds.com",
-      "isDj": true
-    },
-    {
-      "id": 110,
-      "name": "Michael Brown",
-      "email": "dj10@bassdrop.com",
       "isDj": true
     },
     {
@@ -115,62 +61,186 @@
       "isDj": false
     },
     {
-      "email": "young@email.com",
-      "fullName": "Jonathan",
+
+      "email": "cortado@email.com",
+      "name": "Jonny Cortado",
       "isDj": true,
       "id": 211
+    },
+    {
+      "id": 213,
+      "name": "Ludwig Von BeatMeister",
+      "email": "beatz@email.com",
+      "isDj": true
+    },
+    {
+      "email": "janemusic@email.com",
+      "name": "Jane Bittell",
+      "isDj": true,
+      "id": 214
+    },
+    {
+      "email": "djwiener@email.com",
+      "name": "Wiener Schnitzel",
+      "isDj": true,
+      "id": 215
+    },
+    {
+      "email": "chrismusic@email.com",
+      "name": "Chris Young",
+      "isDj": true,
+      "id": 216
     }
   ],
   "DJs": [
     {
-      "id": 1,
       "userId": 101,
-      "cost": 1000
+      "bio": "Professional Dj",
+      "experienceLevelId": 3,
+      "rate": 410,
+      "availabilityTypeId": 2,
+      "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
+      "id": 1
     },
     {
       "id": 2,
-      "userId": 102,
-      "cost": 1200
-    },
-    {
-      "id": 3,
-      "userId": 103,
-      "cost": 1500
+      "userId": 211,
+      "rate": "200",
+      "bio": "Cafe House Music DJ",
+      "experienceLevelId": 2,
+      "availabilityTypeId": 1,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     },
     {
       "id": 4,
-      "userId": 104,
-      "cost": 950
+      "userId": 213,
+      "rate": "400",
+      "bio": "Orchestral DubStep DJ",
+      "experienceLevelId": 5,
+      "availabilityTypeId": 1,
+      "sample": "https://www.youtube.com/watch?v=IkXWlNuSwCo"
     },
     {
       "id": 5,
-      "userId": 105,
-      "cost": 1300
+      "userId": 214,
+      "rate": "100",
+      "bio": "Cafe House Muisc DJ",
+      "experienceLevelId": 1,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     },
     {
       "id": 6,
-      "userId": 106,
-      "cost": 1100
+      "userId": 215,
+      "rate": "500",
+      "bio": "beat master",
+      "experienceLevelId": 4,
+      "availabilityTypeId": 2,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     },
     {
       "id": 7,
-      "userId": 107,
-      "cost": 1400
+      "userId": 216,
+      "rate": "500",
+      "bio": "Cafe House Music DJ",
+      "experienceLevelId": 3,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    }
+  ],
+  "availabilityTypes": [
+    {
+      "id": 1,
+      "label": "Always"
+    },
+    {
+      "id": 2,
+      "label": "Certain Days"
+    },
+    {
+      "id": 3,
+      "label": "Weekends Only"
+    },
+    {
+      "id": 4,
+      "label": "Currently Unavailable"
+    }
+  ],
+  "experienceLevels": [
+    {
+      "id": 1,
+      "level": "0-2 years"
+    },
+    {
+      "id": 2,
+      "level": "3-5 years"
+    },
+    {
+      "id": 3,
+      "level": "5-7 years"
+    },
+    {
+      "id": 4,
+      "level": "7-10 years"
+    },
+    {
+      "id": 5,
+      "level": "10+ years"
+    }
+  ],
+  "availableDays": [
+    {
+      "id": 1,
+      "label": "Monday"
+    },
+    {
+      "id": 2,
+      "label": "Tuesday"
+    },
+    {
+      "id": 3,
+      "label": "Wednesday"
+    },
+    {
+      "id": 4,
+      "label": "Thursday"
+    },
+    {
+      "id": 5,
+      "label": "Friday"
+    },
+    {
+      "id": 6,
+      "label": "Saturday"
+    },
+    {
+      "id": 7,
+      "label": "Sunday"
     },
     {
       "id": 8,
-      "userId": 108,
-      "cost": 1000
+      "label": "Everyday"
     },
     {
       "id": 9,
-      "userId": 109,
-      "cost": 1250
+      "label": "None"
+    }
+  ],
+  "DjAvailableDays": [
+    {
+      "id": 1,
+      "DjId": 1,
+      "availableDayId": 5
     },
     {
-      "id": 10,
-      "userId": 110,
-      "cost": 950
+      "id": 2,
+      "DjId": 1,
+      "availableDayId": 6
+    },
+    {
+      "id": 3,
+      "DjId": 1,
+      "availableDayId": 7
     }
   ],
   "customers": [
@@ -329,7 +399,7 @@
       "cost": 10000
     }
   ],
-  "addOns": [
+  "addOn": [
     {
       "id": 1,
       "name": "Photobooth",
@@ -348,16 +418,11 @@
     {
       "id": 4,
       "name": "Additional Time (1 Hour)",
-      "cost": 200
-    },
-    {
-      "id": 5,
-      "name": "DJ + Live Musician Combo",
-      "cost": 500
+      "cost": 100
     },
     {
       "id": 6,
-      "name": "Laser Light Show",
+      "name": "Uplighting",
       "cost": 350
     },
     {
@@ -376,151 +441,231 @@
       "cost": 300
     },
     {
-      "id": 10,
-      "name": "Live Band Performance",
-      "cost": 800
-    },
-    {
-      "id": 11,
-      "name": "Catering Service",
-      "cost": 2000
-    },
-    {
-      "id": 12,
-      "name": "Event Photographer",
-      "cost": 1500
-    },
-    {
-      "id": 13,
-      "name": "Event Videographer",
-      "cost": 1800
-    },
-    {
-      "id": 14,
-      "name": "Car Service for Guests",
-      "cost": 1200
-    },
-    {
-      "id": 15,
-      "name": "Event Security Staff",
-      "cost": 500
-    },
-    {
-      "id": 16,
-      "name": "Fireworks Display",
-      "cost": 2500
-    },
-    {
       "id": 17,
       "name": "Dancefloor LED Lights",
       "cost": 450
     },
     {
       "id": 18,
-      "name": "Chill-out Lounge Area",
-      "cost": 1000
+      "name": "Extra Speaker",
+      "cost": 150
     },
     {
       "id": 19,
-      "name": "Saxophone Performance",
-      "cost": 400
-    },
-    {
-      "id": 20,
-      "name": "Violin Performance",
-      "cost": 350
+      "name": "Extra Wireless Microphone",
+      "cost": 75
     }
   ],
-  "eventAddOns": [
+  "djAddOns": [
     {
-      "ID": 1,
-      "addOnsId": 1
+      "djId": 1,
+      "addOnId": 1
     },
     {
-      "ID": 2,
-      "addOnsId": 3
+      "djId": 1,
+      "addOnId": 4
     },
     {
-      "ID": 3,
-      "addOnsId": 4
+      "djId": 2,
+      "addOnId": 3
     },
     {
-      "ID": 4,
-      "addOnsId": 7
+      "djId": 2,
+      "addOnId": 7
     },
     {
-      "ID": 5,
-      "addOnsId": 9
+      "djId": 3,
+      "addOnId": 1
     },
     {
-      "ID": 6,
-      "addOnsId": 11
+      "djId": 3,
+      "addOnId": 2
     },
     {
-      "ID": 7,
-      "addOnsId": 12
+      "djId": 3,
+      "addOnId": 9
     },
     {
-      "ID": 8,
-      "addOnsId": 13
+      "djId": 4,
+      "addOnId": 8
     },
     {
-      "ID": 9,
-      "addOnsId": 14
+      "djId": 5,
+      "addOnId": 1
     },
     {
-      "ID": 10,
-      "addOnsId": 15
+      "djId": 5,
+      "addOnId": 7
+    },
+    {
+      "djId": 6,
+      "addOnId": 4
+    },
+    {
+      "djId": 6,
+      "addOnId": 18
+    },
+    {
+      "djId": 7,
+      "addOnId": 6
+    },
+    {
+      "djId": 8,
+      "addOnId": 19
+    },
+    {
+      "djId": 9,
+      "addOnId": 17
+    },
+    {
+      "djId": 9,
+      "addOnId": 2
+    },
+    {
+      "djId": 10,
+      "addOnId": 19
     }
   ],
   "events": [
     {
       "userId": 210,
       "description": "My GramGram's 1000th birthday. ",
-      "DJId": "3",
-      "eventTypeId": "6",
+      "DJId": 4,
+      "hours": 4,
+      "eventTypeId": 2,
       "date": "2025-12-20",
-      "totalCost": 1500,
       "id": 1,
-      "eventType": {
-        "id": 2,
-        "name": "Birthday"
-      }
+      "totalCost": 400
     },
     {
       "userId": 210,
       "description": "Office holiday party",
-      "DJId": "9",
+      "DJId": "1",
+      "hours": 4,
       "eventTypeId": "5",
       "date": "2025-12-22",
-      "totalCost": 1250,
-      "id": 3,
-      "eventType": {
-        "id": 3,
-        "name": "Holiday"
-      }
+      "totalCost": 297,
+      "id": 3
     },
     {
       "userId": 210,
       "description": "Daughter's birthday party",
-      "DJId": "7",
+      "DJId": "2",
+      "hours": 4,
       "eventTypeId": "2",
       "date": "2025-12-20",
-      "totalCost": 1400,
-      "id": 6,
-      "eventType": {
-        "id": 6,
-        "name": "Other"
-      }
+      "totalCost": "50",
+      "id": 6
     },
     {
       "userId": 209,
       "description": "Husband's birthday",
       "DJId": "9",
+      "hours": 4,
       "eventTypeId": "2",
       "date": "2025-12-19",
       "totalCost": 1250,
       "id": 7
+    },
+    {
+      "userId": 210,
+      "description": "Great great great grandpa's funeral",
+      "DJId": "1",
+      "hours": 4,
+      "eventTypeId": "6",
+      "date": "2125-12-20",
+      "totalCost": 150,
+      "id": 8
+    },
+    {
+      "userId": 210,
+      "description": "frat house summer party",
+      "DJId": "4",
+      "hours": 6,
+      "eventTypeId": 6,
+      "date": "2025-07-14",
+      "totalCost": "400",
+      "id": 9
+    },
+    {
+      "userId": 210,
+      "description": "summer pool party",
+      "DJId": 4,
+      "hours": 2,
+      "eventTypeId": 4,
+      "date": "2025-06-25",
+      "totalCost": 400,
+      "id": 10
+    },
+    {
+      "userId": 210,
+      "description": "End of summer break party",
+      "DJId": 2,
+      "hours": 4,
+      "eventTypeId": 6,
+      "date": "2025-08-25",
+      "totalCost": 200,
+      "id": 11
+    },
+    {
+      "userId": 206,
+      "description": "My brother's Bar Mitzvah",
+      "DJId": 1,
+      "hours": 8,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 410,
+      "id": 12
+    },
+    {
+      "userId": 201,
+      "description": "Son's graduation party",
+      "DJId": 1,
+      "hours": 4,
+      "eventTypeId": 6,
+      "date": "2025-08-31",
+      "totalCost": 300,
+      "id": 13
+    },
+    {
+      "userId": 201,
+      "description": "Father's birthday",
+      "DJId": 4,
+      "hours": 4,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 400,
+      "id": 15
+    },
+    {
+      "userId": 201,
+      "description": "Step father's birthday bash ",
+      "DJId": 4,
+      "hours": 6,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 400,
+      "id": 16
+    },
+    {
+      "userId": 206,
+      "description": "My dog's 10th birthday",
+      "DJId": 2,
+      "hours": 2,
+      "eventTypeId": 6,
+      "date": "2025-12-20",
+      "totalCost": 200,
+      "id": 17
+    },
+    {
+      "userId": 206,
+      "description": "fdgdgdfgsdfgdfsgdf",
+      "DJId": 5,
+      "hours": 150000,
+      "eventTypeId": 1,
+      "date": "3999-12-31",
+      "totalCost": 100,
+      "id": 18
     }
   ]
 }

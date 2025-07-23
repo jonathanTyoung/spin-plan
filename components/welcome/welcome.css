@@ -1,21 +1,172 @@
-.welcome-container {
-    margin: 2rem auto;
-    width: 40%;
-    text-align: center;
-    padding: 5rem 3rem;
-    border: 1px solid var(--outline);
-    background-color: darkgrey;
-    border-radius: 0.5rem;
-  }
+
+
+    :root {
+      --outline: #3a3a3a;
+      --primary: #39ff14;
+      --accent: #ff003c;
+    }
+    
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .welcome-container {
+      margin: 2rem auto;
+      width: 40%;
+      text-align: center;
+      padding: 5rem 3rem;
+      border: 1px solid var(--outline);
+      border-radius: 0.5rem;
+      color: var(--primary);
+      position: relative;
+      
+    }
+    
+    .welcome-container > h1 {
+      display: flex;
+      flex-direction: column;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    
+    .vinyl-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .vinyl-container:hover {
+      transform: scale(1.05);
+    }
+    
+    .vinyl-record {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #121212;
+      border: 1px solid #2a2a2a;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+      animation: spin 6s linear infinite;
+      overflow: hidden;
+    }
+    
+    .vinyl-record::before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 30%;
+      border-radius: 50%;
+      background: #2a2a2a;
+      border: 1px solid #3a3a3a;
+    }
+    
+    .vinyl-record::after {
+      content: "";
+      position: absolute;
+      width: 10%;
+      height: 10%;
+      top: 45%;
+      left: 45%;
+      border-radius: 50%;
+      background: #525252;
+    }
+    
+    .vinyl-grooves {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    
+    .groove {
+      position: absolute;
+      border: 0.5px solid rgba(80, 80, 80, 0.5);
+      border-radius: 50%;
+    }
+    
+    .center-label {
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 30%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), #800020);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+      text-shadow: 0 0 2px black;
+      z-index: 2;
+    }
+    
+    .start-text {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: -50px;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .vinyl-container:hover .start-text {
+      opacity: 1;
+    }
+    
+    .glow-effect {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 0, 60, 0.2) 0%, rgba(57, 255, 20, 0.1) 50%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .vinyl-container:hover .glow-effect {
+      opacity: 1;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .welcome-container {
+        width: 80%;
+        padding: 3rem 1.5rem;
+      }
+      
+      .vinyl-container {
+        width: 150px;
+        height: 150px;
+      }
+    }
   
-  /* This targets any h1 that is a child of an element with the .welcome-container class */
-  .welcome-container > h1 {
-    display: flex;
-    flex-direction: column;
-    color: var(--primary);
-  }
-  
-  /* This targets any div that is a child of an element with the .welcome-container class */
-  .welcome-container > div {
-    font-style: italic;
-  }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getEventById, updateEvent, getAllDJsById, getEventTypes, cancelEvent } from "../services/EventServices.jsx";
-import "./Form.css";
+import "./EventDetails.css";
 
 export const EventDetails = ({ currentUser }) => {
     const { eventId } = useParams();
@@ -23,7 +23,7 @@ export const EventDetails = ({ currentUser }) => {
             setEventTypes(eventTypesData);
             setLoading(false);
         });
-    }, [eventId]);
+    }, [eventId, currentUser]);
 
     if (loading || !event) return <div>Loading...</div>;
 
@@ -35,14 +35,26 @@ export const EventDetails = ({ currentUser }) => {
     const handleDJChange = (evt) => {
         const { id, value } = evt.target;
         const selectedDJ = DJs.find(dj => dj.id === parseInt(value));
-        const cost = selectedDJ ? selectedDJ.cost : 0;
-        setEvent(prev => ({...prev, [id]: value, totalCost: cost
+        const cost = selectedDJ ? selectedDJ.rate : 0;
+        setEvent(prev => ({
+            ...prev, [id]: value, totalCost: cost
         }));
     };
 
     const handleUpdate = (evt) => {
         evt.preventDefault();
-        updateEvent(event).then(() => alert("Event updated!"));
+
+        // Ensure numeric fields are parsed before sending
+        const updatedEvent = {
+            ...event,
+            hours: parseInt(event.hours),
+            DJId: parseInt(event.DJId),
+            eventTypeId: parseInt(event.eventTypeId),
+            totalCost: parseFloat(event.totalCost)
+        };
+
+
+        updateEvent(updatedEvent).then(() => alert("Event updated!"));
     };
 
     // Cancel the entire order
@@ -89,7 +101,7 @@ export const EventDetails = ({ currentUser }) => {
                         <option value="">Select Your DJ...</option>
                         {DJs.map((dj) => (
                             <option key={dj.id} value={dj.id}>
-                                {dj.user.name} - ${dj.cost}
+                                {dj.user.name} - ${dj.rate}
                             </option>
                         ))}
                     </select>
@@ -97,7 +109,20 @@ export const EventDetails = ({ currentUser }) => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="eventTypeId">Choose Event Type</label>
+                    <label>Event Hours</label>
+                    <input
+                        type="number"
+                        id="hours"
+                        value={event.hours || ""}
+                        className="form-control"
+                        placeholder="# of hours"
+                        onChange={handleChange}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label className="label-color" htmlFor="eventTypeId">Choose Event Type</label>
                     <select
                         id="eventTypeId"
                         value={event.eventTypeId || ""}
@@ -130,27 +155,27 @@ export const EventDetails = ({ currentUser }) => {
             <fieldset>
                 <div className="form-group">
                     <label>Total Cost</label>
-                    <div className="form-control">
-                        ${event.totalCost || 0}
+                    <div className="form-group">
+                        ${(event.totalCost * event.hours) || 0}
                     </div>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="small-btn">
                     <button
                         type="submit"
-                        className="form-btn btn-info"
-                        
+                        className="cyber-btn"
+
                     >
                         Update Event
                     </button>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="small-btn">
                     <button
                         type="button"
-                        className="form-btn btn-info"
+                        className="cyber-btn"
                         onClick={handleDelete}
                     >
                         Delete Event

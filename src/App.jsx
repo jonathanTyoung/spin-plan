@@ -1,10 +1,13 @@
-import "./App.css";
+// import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Login } from "../components/auth/Login.jsx";
 // import { CustomerViews } from "../components/views/CustomerViews.jsx";
 import { Register } from "../components/auth/Register.jsx";
 import { Authorized } from "../components/views/Authorized.jsx";
 import { ApplicationViews } from "../components/views/ApplicationViews.jsx";
+// import "./cyberPunk.css"
+import "./index.css"
+
 
 
 export const App = () => {
