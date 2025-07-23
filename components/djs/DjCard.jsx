@@ -44,7 +44,7 @@ export const DjCard = ({ DJObj, currentUser }) => {
     {allDJs.map((DJObj) => (
       <section key={DJObj.id} className="dj-card-section">
         <div className="dj-card">
-          <header className="dj-card__header">🎧 DJ: {DJObj.user.name}</header>
+          <header className="dj-card__header">🎧 DJ: {DJObj.user?.name}</header>
 
           <div className="dj-card__row">
             <div className="dj-card__label">Bio:</div>

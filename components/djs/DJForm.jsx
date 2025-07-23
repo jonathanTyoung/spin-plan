@@ -1,5 +1,5 @@
 
-import "./Form.css"
+import "./DjForm.css"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getAvailabilityTypes, getAvailableDays, getExperienceLevels, getFullDJProfile, updateDJProfile } from "../services/djServices.jsx"
@@ -263,7 +263,7 @@ export const DJForm = ({ currentUser }) => {
 
             {/* Add other fields as needed */}
 
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="cyber-btn">
                 Save Profile
             </button>
 

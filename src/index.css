@@ -43,7 +43,7 @@ a {
    Button Styling
    ================================ */
 button {
-  background-color: var(--primary-color);
+  background-color: #B11016;
   color: B11016;
   border: none;
   border-radius: 8px;
