@@ -9,6 +9,6 @@ import { BrowserRouter } from "react-router-dom";
 const container = document.getElementById("root");
 const root = ReactDOM.createRoot(container);
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename='spin-plan'>
         <App />
     </BrowserRouter>);

@@ -67,24 +67,36 @@
       "id": 211
     },
     {
-      "email": "djjane@email.com",
-      "name": "Jane Bittell",
-      "isDj": true,
-      "id": 212
-    },
-    {
       "id": 213,
       "name": "Ludwig Von BeatMeister",
       "email": "beatz@email.com",
       "isDj": true
+    },
+    {
+      "email": "janemusic@email.com",
+      "name": "Jane Bittell",
+      "isDj": true,
+      "id": 214
+    },
+    {
+      "email": "djwiener@email.com",
+      "name": "Wiener Schnitzel",
+      "isDj": true,
+      "id": 215
+    },
+    {
+      "email": "chrismusic@email.com",
+      "name": "Chris Young",
+      "isDj": true,
+      "id": 216
     }
   ],
   "DJs": [
     {
       "userId": 101,
-      "bio": "Professional and high energy wedding DJ",
-      "experienceLevelId": 2,
-      "rate": 300,
+      "bio": "Professional Dj",
+      "experienceLevelId": 3,
+      "rate": 410,
       "availabilityTypeId": 2,
       "sample": "https://www.youtube.com/watch?v=s8TiQHP0hUI",
       "id": 1
@@ -99,15 +111,6 @@
       "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     },
     {
-      "id": 3,
-      "userId": 212,
-      "rate": "500",
-      "bio": "beat master",
-      "experienceLevelId": 4,
-      "availabilityTypeId": 3,
-      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
-    },
-    {
       "id": 4,
       "userId": 213,
       "rate": "400",
@@ -115,6 +118,33 @@
       "experienceLevelId": 5,
       "availabilityTypeId": 1,
       "sample": "https://www.youtube.com/watch?v=IkXWlNuSwCo"
+    },
+    {
+      "id": 5,
+      "userId": 214,
+      "rate": "100",
+      "bio": "Cafe House Muisc DJ",
+      "experienceLevelId": 1,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    },
+    {
+      "id": 6,
+      "userId": 215,
+      "rate": "500",
+      "bio": "beat master",
+      "experienceLevelId": 4,
+      "availabilityTypeId": 2,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    },
+    {
+      "id": 7,
+      "userId": 216,
+      "rate": "500",
+      "bio": "Cafe House Music DJ",
+      "experienceLevelId": 3,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
     }
   ],
   "availabilityTypes": [
@@ -579,22 +609,62 @@
     {
       "userId": 206,
       "description": "My brother's Bar Mitzvah",
-      "DJId": 4,
-      "hours": 4,
+      "DJId": 1,
+      "hours": 8,
       "eventTypeId": 2,
       "date": "2025-09-23",
-      "totalCost": 400,
+      "totalCost": 410,
       "id": 12
     },
     {
       "userId": 201,
-      "description": "Wife's going away party",
+      "description": "Son's graduation party",
       "DJId": 1,
       "hours": 4,
       "eventTypeId": 6,
       "date": "2025-08-31",
       "totalCost": 300,
       "id": 13
+    },
+    {
+      "userId": 201,
+      "description": "Father's birthday",
+      "DJId": 4,
+      "hours": 4,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 400,
+      "id": 15
+    },
+    {
+      "userId": 201,
+      "description": "Step father's birthday bash ",
+      "DJId": 4,
+      "hours": 6,
+      "eventTypeId": 2,
+      "date": "2025-09-23",
+      "totalCost": 400,
+      "id": 16
+    },
+    {
+      "userId": 206,
+      "description": "My dog's 10th birthday",
+      "DJId": 2,
+      "hours": 2,
+      "eventTypeId": 6,
+      "date": "2025-12-20",
+      "totalCost": 200,
+      "id": 17
+    },
+    {
+      "userId": 206,
+      "description": "fdgdgdfgsdfgdfsgdf",
+      "DJId": 5,
+      "hours": 150000,
+      "eventTypeId": 1,
+      "date": "3999-12-31",
+      "totalCost": 100,
+      "id": 18
     }
   ]
 }

@@ -153,7 +153,7 @@ export const EventForm = ({ currentUser }) => {
                     >
                         <option value="">Select Your Event Type...</option>
 
-                        {eventTypes.map((type) => (
+                        {eventTypes.map((type) => ( // for type of eventTypes 
                             <option key={type.id} value={type.id}>
                                 {type.name}
                             </option>

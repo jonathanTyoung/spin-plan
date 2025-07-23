@@ -98,7 +98,7 @@ export const NewDjUser = () => {
           type="number"
           name="rate"
           placeholder="Hourly Rate"
-          value={djProfile.rate}
+          value={djProfile.rate === null || djProfile.rate === undefined ? '' : djProfile.rate}
           onChange={handleChange}
           className="form-control"
         />
