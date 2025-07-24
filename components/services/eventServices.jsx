@@ -1,10 +1,10 @@
 export const getAllEvents = () => {
-    return fetch(`http://localhost:8088/events`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/events`).then((res) =>
         res.json())
 }
 
 export const createEvent = (event) => {
-    return fetch(`http://localhost:8088/events`, {
+    return fetch(`https://spin-plan-6.onrender.com/events`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -23,7 +23,7 @@ export const createEvent = (event) => {
         })
 }
 export const updateEvent = (event) => {
-    return fetch(`http://localhost:8088/events/${event.id}`, {
+    return fetch(`https://spin-plan-6.onrender.com/events/${event.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -33,21 +33,21 @@ export const updateEvent = (event) => {
 };
 
 export const getEventTypes = () => {
-    return fetch(`http://localhost:8088/eventTypes`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/eventTypes`).then((res) =>
         res.json())
 }
 
 export const getAllDJsById = () => {
-    return fetch(`http://localhost:8088/DJs/?_expand=user`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/DJs/?_expand=user`).then((res) =>
         res.json())
 }
 
 export const getAllEventsWithDJNameAndEventType = async () => {
     const [events, DJs, users, eventTypes] = await Promise.all([
-        fetch('http://localhost:8088/events').then(res => res.json()),
-        fetch('http://localhost:8088/DJs').then(res => res.json()),
-        fetch('http://localhost:8088/users').then(res => res.json()),
-        fetch('http://localhost:8088/eventTypes').then(res => res.json())
+        fetch('https://spin-plan-6.onrender.com/events').then(res => res.json()),
+        fetch('https://spin-plan-6.onrender.com/DJs').then(res => res.json()),
+        fetch('https://spin-plan-6.onrender.com/users').then(res => res.json()),
+        fetch('https://spin-plan-6.onrender.com/eventTypes').then(res => res.json())
     ]);
 
     return events?.map(event => {
@@ -63,18 +63,18 @@ export const getAllEventsWithDJNameAndEventType = async () => {
 };
 
 export const getFullEventProfile = (DJId) => {
-    return fetch(`http://localhost:8088/events?DJId=${DJId}&_expand=user&_expand=eventType&_expand=DJ`)
+    return fetch(`https://spin-plan-6.onrender.com/events?DJId=${DJId}&_expand=user&_expand=eventType&_expand=DJ`)
         .then(res => res.json());
 };
 
 
 export const getEventById = (id) => {
-    return fetch(`http://localhost:8088/events/${id}`)
+    return fetch(`https://spin-plan-6.onrender.com/events/${id}`)
         .then(res => res.json());
 };
 
 export const cancelEvent = (eventId) => {
-    return fetch(`http://localhost:8088/events/${eventId}`, {
+    return fetch(`https://spin-plan-6.onrender.com/events/${eventId}`, {
         method: "DELETE"
     }).then(res => {
         if (!res.ok) throw new Error("Failed to delete event");
@@ -84,7 +84,7 @@ export const cancelEvent = (eventId) => {
 
 
 export const getAllEventsAndUsersAndEventTypes = (eventId) => {
-    return fetch(`http://localhost:8088/events?eventId=${eventId}&_expand=user&_expand=eventType`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/events?eventId=${eventId}&_expand=user&_expand=eventType`).then((res) =>
         res.json())
 }
 

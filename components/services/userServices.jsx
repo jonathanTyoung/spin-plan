@@ -1,15 +1,15 @@
 export const getAllUsers = () => {
-    return fetch(`http://localhost:8088/users`)
+    return fetch(`https://spin-plan-6.onrender.com/users`)
         .then((res) => res.json())
 }
 
 export const getUserByEmail = (email) => {
-    return fetch(`http://localhost:8088/users?email=${email}`)
+    return fetch(`https://spin-plan-6.onrender.com/users?email=${email}`)
         .then((res) => res.json())
 }
 
 export const createUser = (customer) => {
-    return fetch("http://localhost:8088/users", {
+    return fetch("https://spin-plan-6.onrender.com/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -19,22 +19,22 @@ export const createUser = (customer) => {
 }
 
 export const getNonDjUsers = () => {
-    return fetch(`http://localhost:8088/users?isDj=false`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/users?isDj=false`).then((res) =>
         res.json()
     )
 }
 export const getDjUsers = () => {
-    return fetch(`http://localhost:8088/users?isDj=true`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/users?isDj=true`).then((res) =>
         res.json()
     )
 }
 
 export const getUserById = (id) => {
-  return fetch(`http://localhost:8088/users/${id}`).then((res) => res.json());
+  return fetch(`https://spin-plan-6.onrender.com/users/${id}`).then((res) => res.json());
 };
 
 export const updateUserProfile = (userObj) => {
-    return fetch(`http://localhost:8088/users/${userObj.id}`, {
+    return fetch(`https://spin-plan-6.onrender.com/users/${userObj.id}`, {
         method: "PUT", // or "PATCH" for partial updates
         headers: {
             "Content-Type": "application/json"

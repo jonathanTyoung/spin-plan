@@ -1,10 +1,10 @@
 export const getAllDJsByUserId = () => {
-    return fetch(`http://localhost:8088/DJs?_expand=user`).then((res) => res.json())
+    return fetch(`https://spin-plan-6.onrender.com/DJs?_expand=user`).then((res) => res.json())
 }
 
 export const createDJ = async (djData) => {
   try {
-    const response = await fetch("http://localhost:8088/DJs", {
+    const response = await fetch("https://spin-plan-6.onrender.com/DJs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const createDJ = async (djData) => {
 
 
 export const getDJByUserId = (userId) => {
-    return fetch(`http://localhost:8088/DJs?userId=${userId}&_expand=user`, {
+    return fetch(`https://spin-plan-6.onrender.com/DJs?userId=${userId}&_expand=user`, {
         headers: {
             "Cache-Control": "no-cache", // Prevent caching
         },
@@ -50,14 +50,14 @@ export const getDJByUserId = (userId) => {
 
 export const getFullDJProfile = async (userId) => {
     // 1. Fetch the DJ with all relevant expansions
-    const djRes = await fetch(`http://localhost:8088/DJs?userId=${userId}&_expand=user&_expand=experienceLevel&_expand=availabilityType`);
+    const djRes = await fetch(`https://spin-plan-6.onrender.com/DJs?userId=${userId}&_expand=user&_expand=experienceLevel&_expand=availabilityType`);
     const djData = await djRes.json();
     const dj = djData[0];
 
     if (!dj) return null;
 
     // // 2. Fetch all DjAvailableDays rows for this DJ and expand availableDay
-    // const daysRes = await fetch(`http://localhost:8088/DjAvailableDays?DjId=${dj.id}&_expand=availableDay`);
+    // const daysRes = await fetch(`https://spin-plan-6.onrender.com/DjAvailableDays?DjId=${dj.id}&_expand=availableDay`);
     // const dayLinks = await daysRes.json();
 
     // // 3. Map to an array of availableDay objects
@@ -69,7 +69,7 @@ export const getFullDJProfile = async (userId) => {
 
 
 export const updateDJProfile = (id, editedDj) => {
-    return fetch(`http://localhost:8088/djs/${id}`, {
+    return fetch(`https://spin-plan-6.onrender.com/djs/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
@@ -91,11 +91,11 @@ export const updateSelectedDays = () => {
 }
 
 export const getExperienceLevels = () => {
-    return fetch(`http://localhost:8088/experienceLevels`).then((res) => res.json())
+    return fetch(`https://spin-plan-6.onrender.com/experienceLevels`).then((res) => res.json())
 }
 export const getAvailabilityTypes = () => {
-    return fetch(`http://localhost:8088/availabilityTypes`).then((res) => res.json())
+    return fetch(`https://spin-plan-6.onrender.com/availabilityTypes`).then((res) => res.json())
 }
 export const getAvailableDays = () => {
-    return fetch(`http://localhost:8088/availableDays`).then((res) => res.json())
+    return fetch(`https://spin-plan-6.onrender.com/availableDays`).then((res) => res.json())
 }
