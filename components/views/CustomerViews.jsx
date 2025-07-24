@@ -4,7 +4,7 @@ import { EventForm } from "../forms/EventForm.jsx"
 import { UpcomingEvents } from "../events/UpcomingEvents.jsx"
 import { EventDetails } from "../events/EventDetails.jsx"
 import { CustomerNav, } from "../nav/CustomerNav.jsx"
-import { DJList } from "../djs/djList.jsx"
+import { DJList } from "../djs/DJList.jsx"
 import { AddOnList } from "../addOn/addOnList.jsx"
 import VinylButton from "../welcome/VinylButton.jsx"
 
