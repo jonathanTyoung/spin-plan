@@ -19,8 +19,8 @@
         "build": "vite build",
         "serve": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "ghpages -d build",
-        "start:api": "json-server --watch spin-plan.json --port 8000"
+        "deploy": "gh-pages -d build",
+        "start:api": "json-server --watch database.json --port 8000"
     },
     "eslintConfig": {
         "extends": [
