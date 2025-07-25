@@ -69,7 +69,7 @@ export const getFullDJProfile = async (userId) => {
 
 
 export const updateDJProfile = (id, editedDj) => {
-    return fetch(`https://spin-plan-6.onrender.com/djs/${id}`, {
+    return fetch(`https://spin-plan-6.onrender.com/DJs/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
