@@ -108,7 +108,7 @@ export const EventForm = ({ currentUser }) => {
                         <option value="">Select Your DJ...</option>
                         {DJs.map((dj) => (
                             <option key={dj.id} value={dj.id}>
-                                {dj.user.name} - ${dj.rate}
+                                {dj.user?.name} - ${dj?.rate}
                             </option>
                         ))}
                     </select>
@@ -120,7 +120,7 @@ export const EventForm = ({ currentUser }) => {
                     <label>Event Hours</label>
                     <input
                         type="number"
-                        value={event.hours}
+                        value={event?.hours}
                         className="form-control"
                         placeholder="# of hours"
                         onChange={(e) =>
@@ -155,7 +155,7 @@ export const EventForm = ({ currentUser }) => {
 
                         {eventTypes.map((type) => ( // for type of eventTypes 
                             <option key={type.id} value={type.id}>
-                                {type.name}
+                                {type?.name}
                             </option>
                         ))}
                     </select>
