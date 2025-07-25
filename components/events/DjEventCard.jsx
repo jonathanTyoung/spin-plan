@@ -62,7 +62,7 @@ export const DjEventCard = ({ currentUser }) => {
           key={event.id}
         >
           <ol className="event-card">
-            <header className="event-card__header">Event: {event.eventType.name}</header>
+            <header className="event-card__header">Event: {event.eventType?.name}</header>
 
             <div className="event-card__row">
               <div className="event-card__label">Description:</div>
