@@ -38,7 +38,7 @@ export const getEventTypes = () => {
 }
 
 export const getAllDJsById = () => {
-    return fetch(`https://spin-plan-6.onrender.com/djs/?_expand=user`).then((res) =>
+    return fetch(`https://spin-plan-6.onrender.com/djs?_expand=user`).then((res) =>
         res.json())
 }
 
