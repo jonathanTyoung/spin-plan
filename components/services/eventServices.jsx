@@ -45,7 +45,7 @@ export const getAllDJsById = () => {
 export const getAllEventsWithDJNameAndEventType = async () => {
     const [events, DJs, users, eventTypes] = await Promise.all([
         fetch('https://spin-plan-6.onrender.com/events').then(res => res.json()),
-        fetch('https://spin-plan-6.onrender.com/DJs').then(res => res.json()),
+        fetch('https://spin-plan-6.onrender.com/djs').then(res => res.json()),
         fetch('https://spin-plan-6.onrender.com/users').then(res => res.json()),
         fetch('https://spin-plan-6.onrender.com/eventTypes').then(res => res.json())
     ]);
@@ -63,8 +63,8 @@ export const getAllEventsWithDJNameAndEventType = async () => {
 };
 
 
-export const getFullEventProfile = (DJId) => {
-    return fetch(`https://spin-plan-6.onrender.com/events?DJId=${DJId}&_expand=user&_expand=eventType&_expand=DJ`)
+export const getFullEventProfile = (djId) => {
+    return fetch(`https://spin-plan-6.onrender.com/events?DJId=${djId}&_expand=user&_expand=eventType&_expand=dj`)
         .then(res => res.json());
 };
 
