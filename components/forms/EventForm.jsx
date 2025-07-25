@@ -108,7 +108,7 @@ export const EventForm = ({ currentUser }) => {
                         <option value="">Select Your DJ...</option>
                         {DJs.map((dj) => (
                             <option key={dj.id} value={dj.id}>
-                                {dj?.user?.name} - ${dj.rate}
+                                {dj.user?.name} - ${dj.rate}
                             </option>
                         ))}
                     </select>

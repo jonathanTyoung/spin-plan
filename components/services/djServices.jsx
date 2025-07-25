@@ -1,10 +1,10 @@
 export const getAllDJsByUserId = () => {
-    return fetch(`https://spin-plan-6.onrender.com/DJs?_expand=user`).then((res) => res.json())
+    return fetch(`https://spin-plan-6.onrender.com/djs?_expand=user`).then((res) => res.json())
 }
 
 export const createDJ = async (djData) => {
   try {
-    const response = await fetch("https://spin-plan-6.onrender.com/DJs", {
+    const response = await fetch("https://spin-plan-6.onrender.com/djs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export const createDJ = async (djData) => {
 
 
 export const getDJByUserId = (userId) => {
-    return fetch(`https://spin-plan-6.onrender.com/DJs?userId=${userId}&_expand=user`, {
+    return fetch(`https://spin-plan-6.onrender.com/djs?userId=${userId}&_expand=user`, {
         headers: {
             "Cache-Control": "no-cache", // Prevent caching
         },
@@ -50,7 +50,7 @@ export const getDJByUserId = (userId) => {
 
 export const getFullDJProfile = async (userId) => {
     // 1. Fetch the DJ with all relevant expansions
-    const djRes = await fetch(`https://spin-plan-6.onrender.com/DJs?userId=${userId}&_expand=user&_expand=experienceLevel&_expand=availabilityType`);
+    const djRes = await fetch(`https://spin-plan-6.onrender.com/djs?userId=${userId}&_expand=user&_expand=experienceLevel&_expand=availabilityType`);
     const djData = await djRes.json();
     const dj = djData[0];
 
@@ -69,7 +69,7 @@ export const getFullDJProfile = async (userId) => {
 
 
 export const updateDJProfile = (id, editedDj) => {
-    return fetch(`https://spin-plan-6.onrender.com/DJs/${id}`, {
+    return fetch(`https://spin-plan-6.onrender.com/djs/${id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
