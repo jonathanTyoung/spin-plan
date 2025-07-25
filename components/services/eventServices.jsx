@@ -56,11 +56,12 @@ export const getAllEventsWithDJNameAndEventType = async () => {
         const eventType = eventTypes.find(type => type.id === Number(event.eventTypeId));
         return {
             ...event,
-            DJName: user ? user.name : "Unknown DJ",
+            DJName: user ? user?.name : "Unknown DJ",
             eventTypeName: eventType ? eventType.name : "Unknown Event Type"
         };
     });
 };
+
 
 export const getFullEventProfile = (DJId) => {
     return fetch(`https://spin-plan-6.onrender.com/events?DJId=${DJId}&_expand=user&_expand=eventType&_expand=DJ`)
