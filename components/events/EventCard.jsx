@@ -50,7 +50,7 @@ export const EventCard = ({ eventObj, currentUser }) => {
 
           <div className="event-card__row">
             <div className="event-card__label">DJ:</div>
-            <div className="event-card__value">{eventObj.DJName}</div>
+            <div className="event-card__value">{eventObj?.DJName}</div>
           </div>
 
           <div className="event-card__row">
