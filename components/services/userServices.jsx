@@ -1,49 +1,32 @@
-export const getAllUsers = () => {
-    return fetch(`https://spin-plan-6.onrender.com/users`)
-        .then((res) => res.json())
-}
+const API_URL = import.meta.env.VITE_API_URL;
 
-export const getUserByEmail = (email) => {
-    return fetch(`https://spin-plan-6.onrender.com/users?email=${email}`)
-        .then((res) => res.json())
-}
-
-export const createUser = (customer) => {
-    return fetch("https://spin-plan-6.onrender.com/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(customer),
-    }).then((res) => res.json())
-}
-
-export const getNonDjUsers = () => {
-    return fetch(`https://spin-plan-6.onrender.com/users?isDj=false`).then((res) =>
-        res.json()
-    )
-}
-export const getDjUsers = () => {
-    return fetch(`https://spin-plan-6.onrender.com/users?isDj=true`).then((res) =>
-        res.json()
-    )
-}
-
-export const getUserById = (id) => {
-  return fetch(`https://spin-plan-6.onrender.com/users/${id}`).then((res) => res.json());
+// Generic fetch helper
+const apiFetch = async (endpoint, options = {}) => {
+  try {
+    const res = await fetch(`${API_URL}${endpoint}`, options);
+    if (!res.ok) throw new Error(`API error: ${res.statusText}`);
+    return res.json();
+  } catch (error) {
+    console.error(`API error on ${endpoint}:`, error);
+    throw error;
+  }
 };
 
-export const updateUserProfile = (userObj) => {
-    return fetch(`https://spin-plan-6.onrender.com/users/${userObj.id}`, {
-        method: "PUT", // or "PATCH" for partial updates
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(userObj)
-    }).then(res => {
-        if (!res.ok) {
-            throw new Error("Failed to update user profile");
-        }
-        return res.json();
-    });
-};
+// Users
+export const getAllUsers = () => apiFetch("/users");
+export const getUserByEmail = (email) => apiFetch(`/users?email=${email}`);
+export const createUser = (userObj) =>
+  apiFetch("/users", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userObj),
+  });
+export const getNonDjUsers = () => apiFetch("/users?isDj=false");
+export const getDjUsers = () => apiFetch("/users?isDj=true");
+export const getUserById = (id) => apiFetch(`/users/${id}`);
+export const updateUserProfile = (userObj) =>
+  apiFetch(`/users/${userObj.id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(userObj),
+  });

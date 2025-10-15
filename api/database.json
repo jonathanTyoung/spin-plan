@@ -89,6 +89,12 @@
       "name": "Chris Young",
       "isDj": true,
       "id": 216
+    },
+    {
+      "id": 217,
+      "name": "Jake Gomes",
+      "email": "jakeadmin@email.com",
+      "isDj": true
     }
   ],
   "djs": [
@@ -104,7 +110,7 @@
     {
       "id": 2,
       "userId": 211,
-      "rate": "200",
+      "rate": 200,
       "bio": "Cafe House Music DJ",
       "experienceLevelId": 2,
       "availabilityTypeId": 1,
@@ -113,7 +119,7 @@
     {
       "id": 4,
       "userId": 213,
-      "rate": "400",
+      "rate": 400,
       "bio": "Orchestral DubStep DJ",
       "experienceLevelId": 5,
       "availabilityTypeId": 1,
@@ -122,7 +128,7 @@
     {
       "id": 5,
       "userId": 214,
-      "rate": "100",
+      "rate": 100,
       "bio": "Cafe House Muisc DJ",
       "experienceLevelId": 1,
       "availabilityTypeId": 3,
@@ -131,7 +137,7 @@
     {
       "id": 6,
       "userId": 215,
-      "rate": "500",
+      "rate": 500,
       "bio": "beat master",
       "experienceLevelId": 4,
       "availabilityTypeId": 2,
@@ -140,8 +146,17 @@
     {
       "id": 7,
       "userId": 216,
-      "rate": "500",
-      "bio": "Cafe House Music DJ",
+      "rate": 502,
+      "bio": "Real Estate BOSS",
+      "experienceLevelId": 3,
+      "availabilityTypeId": 3,
+      "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
+    },
+    {
+      "id": 7,
+      "userId": 217,
+      "rate": 500,
+      "bio": "Real Estate BOSS",
       "experienceLevelId": 3,
       "availabilityTypeId": 3,
       "sample": "https://www.youtube.com/watch?v=jotUwXTZNtI"
@@ -665,6 +680,16 @@
       "date": "3999-12-31",
       "totalCost": 100,
       "id": 18
+    },
+    {
+      "userId": 101,
+      "description": "Testing for jake",
+      "DJId": 6,
+      "hours": 4,
+      "eventTypeId": 3,
+      "date": "2025-10-16",
+      "totalCost": 500,
+      "id": 19
     }
   ]
 }

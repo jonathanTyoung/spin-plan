@@ -37,7 +37,7 @@ export const DJProfile = ({ currentUser }) => {
       <section className="dj-profile-container">
         <div className="dj-profile-card">
           <header className="dj-profile-header">
-            Displayed Name: {djObj.user?.name || "Unknown DJ"}
+            {djObj.user?.name || "Unknown DJ"}
           </header>
 
           <div className="dj-profile-row">
